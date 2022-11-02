@@ -1,5 +1,6 @@
 import "./App.css";
 import MyImage from "./assets/me3.jpeg";
+import Contact from "./components/Contact";
 import ProjectPreview from "./components/ProjectPreview";
 import { projects } from "./data/projects";
 import { timeline, Event, getDuration } from "./data/timeline";
@@ -7,6 +8,33 @@ import { timeline, Event, getDuration } from "./data/timeline";
 function App() {
   return (
     <>
+      {/* header with "Daniel Escoto" on left and "Projects", "Timeline", and "Contact" on the right */}
+      <header className="flex justify-between items-center px-6 py-4">
+        <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
+          <a href="/">Daniel Escoto</a>
+        </h1>
+        <nav className="flex space-x-4">
+          <a
+            href="#projects"
+            className="text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100"
+          >
+            Projects
+          </a>
+          <a
+            href="#timeline"
+            className="text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100"
+          >
+            Timeline
+          </a>
+          <a
+            href="#contact"
+            className="text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100"
+          >
+            Contact
+          </a>
+        </nav>
+      </header>
+
       <body className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <section className="hero">
           <div className="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-between">
@@ -34,7 +62,10 @@ function App() {
         </section>
 
         {/* projects section */}
-        <section className="container mx-auto px-6 py-20 dark:text-white">
+        <section
+          className="container mx-auto px-6 py-20 dark:text-white"
+          id="projects"
+        >
           <h2 className="text-4xl font-bold mb-8">Projects</h2>
           <div className="flex flex-wrap -mx-6">
             {projects.map((project) => (
@@ -44,7 +75,7 @@ function App() {
         </section>
 
         {/* timeline section */}
-        <section className="container mx-auto px-6 py-20">
+        <section className="container mx-auto px-6 py-20" id="timeline">
           <h2 className="text-4xl font-bold mb-8 dark:text-white">Timeline</h2>
 
           <div>
@@ -100,84 +131,15 @@ function App() {
           </div>
         </section>
 
-        {/* contact section */}
-        <section className="container mx-auto px-6 py-20">
-          <h2 className="text-4xl font-bold mb-8 dark:text-white">Contact</h2>
-          <form
-            className="w-full"
-            action="https://formspree.io/f/xnqoqzjy"
-            method="POST"
-          >
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 dark:text-gray-300 text-xs font-bold mb-2"
-                  htmlFor="grid-name"
-                >
-                  Name
-                </label>
-                <input
-                  className="appearance-none block w-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-800 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white dark:focus:bg-black focus:border-gray-500"
-                  id="grid-name"
-                  type="text"
-                  placeholder="Jane"
-                  name="name"
-                />
-              </div>
-              <div className="w-full md:w-1/2 px-3">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 dark:text-gray-300 text-xs font-bold mb-2"
-                  htmlFor="grid-email"
-                >
-                  Email
-                </label>
-                <input
-                  className="appearance-none block w-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-800 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white dark:focus:bg-black focus:border-gray-500"
-                  id="grid-email"
-                  type="email"
-                  placeholder="jane@info.com"
-                  name="_replyto"
-                />
-              </div>
-            </div>
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full px-3">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 dark:text-gray-300 text-xs font-bold mb-2"
-                  htmlFor="grid-message"
-                >
-                  Message
-                </label>
-                <textarea
-                  className="no-resize appearance-none block w-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-800 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white dark:focus:bg-black focus:border-gray-500 h-48 resize-none"
-                  id="grid-message"
-                  name="message"
-                ></textarea>
-              </div>
-            </div>
-            <div className="md:flex md:items-center">
-              <div className="md:w-1/3">
-                <button
-                  className="shadow bg-stone-500 hover:bg-stone-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-                  type="submit"
-                >
-                  Send
-                </button>
-              </div>
-              <div className="md:w-2/3"></div>
-            </div>
-          </form>
-        </section>
+        <Contact />
       </body>
       {/* footer */}
-      {/* all rights reserved */}
       <footer className="bg-stone-500 text-white text-center py-4">
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="text-sm">
             &copy; {new Date().getFullYear()} Daniel Escoto
           </div>
 
-          {/* links to github and linkedin */}
           <div className="flex items-center">
             <a
               href="https://github.com/daniel-escoto"
