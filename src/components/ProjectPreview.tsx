@@ -9,7 +9,7 @@ function ProjectPreview({ project }: { project: Project }) {
           src={project.image}
           alt={project.name}
         />
-        <p className="block text-gray-800 dark:text-gray-200 font-bold text-xl hover:text-gray-900 dark:hover:text-gray-100 px-4 pt-4 pb-2">
+        <p className="block text-gray-800 dark:text-gray-200 font-bold text-xl hover:text-gray-900 dark:hover:text-gray-100 px-4 pt-4 pb-2 truncate">
           {project.name}
         </p>
 
@@ -23,9 +23,11 @@ function ProjectPreview({ project }: { project: Project }) {
           <span className="inline-block bg-gray-200 dark:bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2">
             {project.tags[0]}
           </span>
-          <span className="inline-block bg-gray-200 dark:bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2">
-            +{project.tags.length - 1}
-          </span>
+          {project.tags[1] && (
+            <span className="inline-block bg-gray-200 dark:bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2">
+              +{project.tags.length - 1}
+            </span>
+          )}
         </div>
 
         <div className="px-4 pb-4">
@@ -39,7 +41,7 @@ function ProjectPreview({ project }: { project: Project }) {
               Github
             </a>
           ) : (
-            <span className="inline-block bg-gray-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mr-2 dark:bg-gray-800 dark:text-gray-300"></span>
+            <></>
           )}
 
           {project.url ? (
@@ -52,7 +54,7 @@ function ProjectPreview({ project }: { project: Project }) {
               Live
             </a>
           ) : (
-            <span className="inline-block bg-gray-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mr-2 dark:bg-gray-800 dark:text-gray-300"></span>
+            <></>
           )}
         </div>
       </div>
