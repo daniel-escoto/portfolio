@@ -2,6 +2,7 @@ import "./App.css";
 import MyImage from "./assets/me3.jpeg";
 import Contact from "./components/Contact";
 import ProjectPreview from "./components/ProjectPreview";
+import Projects from "./components/Projects";
 import { projects } from "./data/projects";
 import { timeline, Event, getDuration } from "./data/timeline";
 
@@ -61,18 +62,7 @@ function App() {
           </div>
         </section>
 
-        {/* projects section */}
-        <section
-          className="container mx-auto px-6 py-20 dark:text-white"
-          id="projects"
-        >
-          <h2 className="text-4xl font-bold mb-8">Projects</h2>
-          <div className="flex flex-wrap -mx-6">
-            {projects.map((project) => (
-              <ProjectPreview project={project} />
-            ))}
-          </div>
-        </section>
+        <Projects />
 
         {/* timeline section */}
         <section className="container mx-auto px-6 py-20" id="timeline">
