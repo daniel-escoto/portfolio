@@ -1,0 +1,7 @@
+/* have class "root" have either white background, or dark background, depending on
+    if the user is in dark mode or not 
+*/
+
+#root {
+  background-color: var(--background-color);
+}
