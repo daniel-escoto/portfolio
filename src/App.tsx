@@ -48,7 +48,7 @@ function App() {
             </div>
             <div className="flex-none flex items-center justify-center">
               <img
-                className="rounded-full w-36 h-36 mb-8 md:mb-0 md:w-48 md:h-48 dark:outline outline-white"
+                className="rounded-full w-36 h-36 mb-8 md:mb-0 md:w-48 md:h-48"
                 src={MyImage}
                 alt="Daniel Escoto"
               />
