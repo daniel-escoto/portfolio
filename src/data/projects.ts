@@ -1,6 +1,7 @@
 import Chess from "../assets/qwik-chess.png";
 import AaronNavarro from "../assets/aaronnavarro.png";
 import Mirror from "../assets/mirror.png";
+import Portfolio from "../assets/portfolio.png";
 
 export interface Project {
   name: string;
@@ -12,6 +13,14 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    name: "Portfolio Website",
+    description:
+      "This website is built with React, Vite, and TypeScript. It is hosted on Netlify and uses GetForm for the contact form.",
+    image: Portfolio,
+    tags: ["React", "TypeScript", "Vite", "Netlify", "GetForm"],
+    github: "https://github.com/daniel-escoto/portfolio",
+  },
   {
     name: "Qwik-Chess",
     description:
