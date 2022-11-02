@@ -1,19 +1,13 @@
 import "./App.css";
 import MyImage from "./assets/me3.jpeg";
 import Contact from "./components/Contact";
-import ProjectPreview from "./components/ProjectPreview";
 import Projects from "./components/Projects";
-import { projects } from "./data/projects";
 import { timeline, Event, getDuration } from "./data/timeline";
 
 function App() {
   return (
     <>
-      {/* header with "Daniel Escoto" on left and "Projects", "Timeline", and "Contact" on the right */}
-      <header className="flex justify-between items-center px-6 py-4">
-        <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
-          <a href="/">Daniel Escoto</a>
-        </h1>
+      <header className="flex justify-end items-center px-6 py-4">
         <nav className="flex space-x-4">
           <a
             href="#projects"
@@ -64,7 +58,6 @@ function App() {
 
         <Projects />
 
-        {/* timeline section */}
         <section className="container mx-auto px-6 py-20" id="timeline">
           <h2 className="text-4xl font-bold mb-8 dark:text-white">Timeline</h2>
 
@@ -93,7 +86,6 @@ function App() {
                     </div>
                   </div>
 
-                  {/* description as bullet points, with visible bullets, and gap between each bullet */}
                   <ul className="ml-6 mt-2 list-disc list-inside">
                     {event.description.map((desc) => (
                       <li className="flex items-start mb-2">
@@ -107,7 +99,6 @@ function App() {
                     ))}
                   </ul>
 
-                  {/* tags */}
                   <div className="flex flex-wrap ml-6 mt-2">
                     {event.tags.map((tag) => (
                       <span className="inline-block bg-gray-200 dark:bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mt-2">
@@ -123,7 +114,6 @@ function App() {
 
         <Contact />
       </body>
-      {/* footer */}
       <footer className="bg-stone-500 text-white text-center py-4">
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="text-sm">

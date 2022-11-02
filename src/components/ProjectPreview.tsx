@@ -1,9 +1,18 @@
 import { Project } from "../data/projects";
 
-function ProjectPreview({ project }: { project: Project }) {
+function ProjectPreview({
+  project,
+  handleSelect,
+}: {
+  project: Project;
+  handleSelect: (project: Project) => void;
+}) {
   return (
     <div className="w-full sm:w-1/2 md:w-1/3 px-6 py-3">
-      <div className="bg-white rounded shadow py-2 dark:bg-gray-900">
+      <div
+        onClick={() => handleSelect(project)}
+        className="bg-white rounded shadow py-2 dark:bg-gray-900 cursor-pointer"
+      >
         <img
           className="h-48 w-full rounded-t object-cover"
           src={project.image}
@@ -37,6 +46,7 @@ function ProjectPreview({ project }: { project: Project }) {
               className="inline-block bg-blue-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mr-2 hover:bg-blue-300 dark:bg-blue-800 dark:hover:bg-blue-700 dark:text-gray-300"
               target="_blank"
               rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
             >
               Github
             </a>
@@ -50,6 +60,7 @@ function ProjectPreview({ project }: { project: Project }) {
               className="inline-block bg-green-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mr-2 hover:bg-green-300 dark:bg-green-800 dark:hover:bg-green-700 dark:text-gray-300"
               target="_blank"
               rel="noreferrer"
+              onClick={(e) => e.stopPropagation()}
             >
               Live
             </a>
