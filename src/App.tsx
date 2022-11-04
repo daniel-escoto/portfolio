@@ -139,35 +139,9 @@ function App() {
 
         <Contact />
       </body>
-      <footer className="bg-stone-500 text-white text-center py-4">
-        <div className="container mx-auto px-6 flex items-center justify-between">
-          <div className="text-sm">
-            &copy; {new Date().getFullYear()} Daniel Escoto
-          </div>
-
-          <div className="flex items-center">
-            <a
-              href="https://www.linkedin.com/in/descoto"
-              className="text-white hover:text-gray-200 mx-2"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/daniel-escoto"
-              className="text-white hover:text-gray-200 mx-2"
-              target="_blank"
-            >
-              Github
-            </a>
-            <a
-              href="https://docs.google.com/document/d/1rNg3_ZiSqkf2wgCs4l6hRnKSBpAiZnLdvXKnNuEGz-Y/edit?usp=sharing"
-              className="text-white hover:text-gray-200 mx-2"
-              target="_blank"
-            >
-              Resume
-            </a>
-          </div>
+      <footer className="flex justify-center items-center px-6 py-4">
+        <div className="text-gray-800 dark:text-gray-200">
+          ©{new Date().getFullYear()} Daniel Escoto
         </div>
       </footer>
     </>
