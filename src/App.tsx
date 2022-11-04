@@ -51,7 +51,6 @@ function App() {
                   href="https://www.linkedin.com/in/danescoto/"
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                   target="_blank"
-                  rel="noreferrer"
                 >
                   LinkedIn
                 </a>
@@ -59,7 +58,6 @@ function App() {
                   href="https://github.com/daniel-escoto"
                   className="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
                   target="_blank"
-                  rel="noreferrer"
                 >
                   GitHub
                 </a>
@@ -67,7 +65,6 @@ function App() {
                   href="https://docs.google.com/document/d/1rNg3_ZiSqkf2wgCs4l6hRnKSBpAiZnLdvXKnNuEGz-Y/edit?usp=sharing"
                   className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
                   target="_blank"
-                  rel="noreferrer"
                 >
                   Resume
                 </a>
@@ -153,7 +150,6 @@ function App() {
               href="https://www.linkedin.com/in/descoto"
               className="text-white hover:text-gray-200 mx-2"
               target="_blank"
-              rel="noreferrer"
             >
               LinkedIn
             </a>
@@ -161,7 +157,6 @@ function App() {
               href="https://github.com/daniel-escoto"
               className="text-white hover:text-gray-200 mx-2"
               target="_blank"
-              rel="noreferrer"
             >
               Github
             </a>
@@ -169,7 +164,6 @@ function App() {
               href="https://docs.google.com/document/d/1rNg3_ZiSqkf2wgCs4l6hRnKSBpAiZnLdvXKnNuEGz-Y/edit?usp=sharing"
               className="text-white hover:text-gray-200 mx-2"
               target="_blank"
-              rel="noreferrer"
             >
               Resume
             </a>

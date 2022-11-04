@@ -45,7 +45,6 @@ function ProjectPreview({
               href={project.github}
               className="inline-block bg-blue-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mr-2 hover:bg-blue-300 dark:bg-blue-800 dark:hover:bg-blue-700 dark:text-gray-300"
               target="_blank"
-              rel="noreferrer"
               onClick={(e) => e.stopPropagation()}
             >
               Github
@@ -59,7 +58,6 @@ function ProjectPreview({
               href={project.url}
               className="inline-block bg-green-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700 mr-2 hover:bg-green-300 dark:bg-green-800 dark:hover:bg-green-700 dark:text-gray-300"
               target="_blank"
-              rel="noreferrer"
               onClick={(e) => e.stopPropagation()}
             >
               Live
