@@ -150,18 +150,28 @@ function App() {
 
           <div className="flex items-center">
             <a
+              href="https://www.linkedin.com/in/descoto"
+              className="text-white hover:text-gray-200 mx-2"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a
               href="https://github.com/daniel-escoto"
               className="text-white hover:text-gray-200 mx-2"
               target="_blank"
+              rel="noreferrer"
             >
               Github
             </a>
             <a
-              href="https://www.linkedin.com/in/descoto"
+              href="https://docs.google.com/document/d/1rNg3_ZiSqkf2wgCs4l6hRnKSBpAiZnLdvXKnNuEGz-Y/edit?usp=sharing"
               className="text-white hover:text-gray-200 mx-2"
               target="_blank"
+              rel="noreferrer"
             >
-              LinkedIn
+              Resume
             </a>
           </div>
         </div>
