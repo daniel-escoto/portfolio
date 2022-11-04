@@ -45,7 +45,35 @@ function App() {
                 is to always build products that provide pixel-perfect,
                 performant experiences.
               </p>
+
+              <div className="flex flex-row space-x-4 mt-8">
+                <a
+                  href="https://www.linkedin.com/in/danescoto/"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://github.com/daniel-escoto"
+                  className="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://docs.google.com/document/d/1rNg3_ZiSqkf2wgCs4l6hRnKSBpAiZnLdvXKnNuEGz-Y/edit?usp=sharing"
+                  className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Resume
+                </a>
+              </div>
             </div>
+
             <div className="flex-none flex items-center justify-center">
               <img
                 className="rounded-full w-36 h-36 mb-8 md:mb-0 md:w-48 md:h-48"
