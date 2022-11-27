@@ -62,7 +62,7 @@ function App() {
                   GitHub
                 </a>
                 <a
-                  href="https://docs.google.com/document/d/1rNg3_ZiSqkf2wgCs4l6hRnKSBpAiZnLdvXKnNuEGz-Y/edit?usp=sharing"
+                  href="https://drive.google.com/file/d/19fMGdeaoa_JtYFSLVOdcyWxUBNImW84m/view?usp=sharing"
                   className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
                   target="_blank"
                 >

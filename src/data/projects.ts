@@ -2,6 +2,7 @@ import Chess from "../assets/qwik-chess.png";
 import AaronNavarro from "../assets/aaronnavarro.png";
 import Mirror from "../assets/mirror.png";
 import Portfolio from "../assets/portfolio.png";
+import SecretSanta from "../assets/secret_santa.png";
 
 export interface Project {
   name: string;
@@ -13,6 +14,15 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    name: "Secret Santa Generator",
+    description:
+      "A simple web app that generates secret santa pairs for a group of people. Users are allowed to input invalid pairs and the app will generate pairs that do not include those invalid pairs.",
+    url: "https://bejewelled-entremet-25560d.netlify.app/",
+    image: SecretSanta,
+    tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    github: "https://github.com/daniel-escoto/secret-santa",
+  },
   {
     name: "Portfolio Website",
     description:
