@@ -2,6 +2,7 @@ import { useState } from "react";
 import { projects, Project } from "../data/projects";
 import ProjectModal from "./ProjectModal";
 import ProjectPreview from "./ProjectPreview";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
@@ -19,9 +20,23 @@ export default function Projects() {
 
   return (
     <>
-      <section
+      <motion.section
         className="container mx-auto px-6 py-20 dark:text-white"
         id="projects"
+        whileInView={{
+          x: 0,
+          transition: {
+            duration: 0.5,
+          },
+        }}
+        initial={{
+          x: 100,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 100,
+          damping: 20,
+        }}
       >
         <h2 className="text-4xl font-bold mb-8">Projects</h2>
         <div className="flex flex-wrap -mx-6">
@@ -31,14 +46,17 @@ export default function Projects() {
         </div>
 
         <div className="flex justify-center mt-8">
-          <button
+          <motion.button
             className="bg-stone-500 text-white font-semibold py-2 px-4 rounded-md"
             onClick={() => setShowAll(!showAll)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400 }}
           >
             {showAll ? "Show Less" : "Show All"}
-          </button>
+          </motion.button>
         </div>
-      </section>
+      </motion.section>
       {selectedProject && (
         <ProjectModal project={selectedProject} onClose={handleClose} />
       )}

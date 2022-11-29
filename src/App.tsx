@@ -3,87 +3,124 @@ import MyImage from "./assets/me3.jpeg";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import { timeline, Event, getDuration } from "./data/timeline";
+import { motion } from "framer-motion";
 
 function App() {
   return (
     <>
       <header className="flex justify-end items-center px-6 py-4">
         <nav className="flex space-x-4">
-          <a
+          <motion.a
             href="#projects"
-            className="text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100"
+            className="text-gray-800 dark:text-gray-200"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             Projects
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#timeline"
-            className="text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100"
+            className="text-gray-800 dark:text-gray-200"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             Timeline
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#contact"
-            className="text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100"
+            className="text-gray-800 dark:text-gray-200"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             Contact
-          </a>
+          </motion.a>
         </nav>
       </header>
 
       <body className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <section className="hero">
-          <div className="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-between">
-            <div className="md:mr-6 dark:text-white">
-              <h2 className="text-4xl font-bold ">Daniel Escoto</h2>
-              <h3 className="text-2xl mt-2 mb-8">
-                SF Bay Area Software Engineer
-              </h3>
-              <p>
-                I'm a software engineer based in the SF Bay Area. I enjoy
-                building things that live on the internet, whether that be
-                websites, mobile applications, or anything in between. My goal
-                is to always build products that provide pixel-perfect,
-                performant experiences.
-              </p>
+        {/* scroll triggered animation */}
+        {/* fade in with motion from left to center when entering viewport */}
+        {/* fade out and motion to right when leaving viewport */}
+        <motion.div
+          className="flex flex-col justify-center items-center"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 100 }}
+          // fast then slow
+          transition={{ duration: 1, ease: [0.6, 0.01, -0.05, 0.9] }}
+        >
+          <section className="hero">
+            <div className="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-between">
+              <div className="md:mr-6 dark:text-white">
+                <h2 className="text-4xl font-bold ">Daniel Escoto</h2>
+                <h3 className="text-2xl mt-2 mb-8">
+                  SF Bay Area Software Engineer
+                </h3>
+                <p>
+                  I'm a software engineer based in the SF Bay Area. I enjoy
+                  building things that live on the internet, whether that be
+                  websites, mobile applications, or anything in between. My goal
+                  is to always build products that provide pixel-perfect,
+                  performant experiences.
+                </p>
 
-              <div className="flex flex-row space-x-4 mt-8">
-                <a
-                  href="https://www.linkedin.com/in/danescoto/"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded border border-blue-700 dark:bg-blue-700 dark:hover:bg-blue-900 dark:border-blue-900"
-                  target="_blank"
-                >
-                  LinkedIn
-                </a>
-                <a
-                  href="https://github.com/daniel-escoto"
-                  className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded border border-gray-700 dark:bg-gray-700 dark:hover:bg-gray-900 dark:border-gray-900"
-                  target="_blank"
-                >
-                  GitHub
-                </a>
-                <a
-                  href="https://drive.google.com/file/d/19fMGdeaoa_JtYFSLVOdcyWxUBNImW84m/view?usp=sharing"
-                  className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded border border-green-700 dark:bg-green-700 dark:hover:bg-green-900 dark:border-green-900"
-                  target="_blank"
-                >
-                  Resume
-                </a>
+                <div className="flex flex-row space-x-4 mt-8">
+                  {/* use motion */}
+
+                  <motion.a
+                    href="https://www.linkedin.com/in/danescoto/"
+                    className="bg-blue-600  text-white font-bold py-2 px-4 rounded border border-blue-700 dark:bg-blue-700 dark:border-blue-900"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                    target="_blank"
+                  >
+                    LinkedIn
+                  </motion.a>
+                  <motion.a
+                    href="https://github.com/daniel-escoto"
+                    className="bg-gray-600  text-white font-bold py-2 px-4 rounded border border-gray-700 dark:bg-gray-700  dark:border-gray-900"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                    target="_blank"
+                  >
+                    GitHub
+                  </motion.a>
+                  <motion.a
+                    href="https://drive.google.com/file/d/19fMGdeaoa_JtYFSLVOdcyWxUBNImW84m/view?usp=sharing"
+                    className="bg-green-600  text-white font-bold py-2 px-4 rounded border border-green-700 dark:bg-green-700  dark:border-green-900"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                    target="_blank"
+                  >
+                    Resume
+                  </motion.a>
+                </div>
+              </div>
+
+              <div className="flex-none flex items-center justify-center">
+                <img
+                  className="rounded-full w-36 h-36 mb-8 md:mb-0 md:w-48 md:h-48"
+                  src={MyImage}
+                  alt="Daniel Escoto"
+                />
               </div>
             </div>
-
-            <div className="flex-none flex items-center justify-center">
-              <img
-                className="rounded-full w-36 h-36 mb-8 md:mb-0 md:w-48 md:h-48"
-                src={MyImage}
-                alt="Daniel Escoto"
-              />
-            </div>
-          </div>
-        </section>
+          </section>
+        </motion.div>
 
         <Projects />
 
-        <section className="container mx-auto px-6 py-20" id="timeline">
+        <motion.section
+          className="container mx-auto px-6 py-20"
+          id="timeline"
+          // from right to center
+          initial={{ x: -100 }}
+          whileInView={{ x: 0, transition: { duration: 0.5 } }}
+          transition={{ type: "spring", stiffness: 100, damping: 20 }}
+        >
           <h2 className="text-4xl font-bold mb-8 dark:text-white">Timeline</h2>
 
           <div>
@@ -135,7 +172,7 @@ function App() {
               </ol>
             ))}
           </div>
-        </section>
+        </motion.section>
 
         <Contact />
       </body>

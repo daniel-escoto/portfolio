@@ -1,4 +1,5 @@
 import { Project } from "../data/projects";
+import { motion } from "framer-motion";
 
 function ProjectPreview({
   project,
@@ -8,7 +9,11 @@ function ProjectPreview({
   handleSelect: (project: Project) => void;
 }) {
   return (
-    <div className="w-full sm:w-1/2 md:w-1/3 px-6 py-3">
+    <motion.div
+      className="w-full md:w-1/2 lg:w-1/3 px-6 mb-8"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+    >
       <div
         onClick={() => handleSelect(project)}
         className="bg-white rounded shadow py-2 dark:bg-gray-900 cursor-pointer"
@@ -67,7 +72,7 @@ function ProjectPreview({
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
