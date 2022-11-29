@@ -3,24 +3,7 @@ import { motion } from "framer-motion";
 export default function Contact() {
   return (
     <>
-      <motion.section
-        className="container mx-auto px-6 py-20"
-        id="contact"
-        whileInView={{
-          x: 0,
-          transition: {
-            duration: 0.5,
-          },
-        }}
-        initial={{
-          x: 100,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 100,
-          damping: 20,
-        }}
-      >
+      <section className="container mx-auto px-6 py-20" id="contact">
         <h2 className="text-4xl font-bold mb-8 dark:text-white">Contact</h2>
         <form
           className="w-full"
@@ -96,7 +79,7 @@ export default function Contact() {
             <div className="md:w-2/3"></div>
           </div>
         </form>
-      </motion.section>
+      </section>
     </>
   );
 }

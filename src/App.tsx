@@ -41,14 +41,7 @@ function App() {
         {/* scroll triggered animation */}
         {/* fade in with motion from left to center when entering viewport */}
         {/* fade out and motion to right when leaving viewport */}
-        <motion.div
-          className="flex flex-col justify-center items-center"
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 100 }}
-          // fast then slow
-          transition={{ duration: 1, ease: [0.6, 0.01, -0.05, 0.9] }}
-        >
+        <div className="flex flex-col justify-center items-center">
           <section className="hero">
             <div className="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-between">
               <div className="md:mr-6 dark:text-white">
@@ -109,18 +102,11 @@ function App() {
               </div>
             </div>
           </section>
-        </motion.div>
+        </div>
 
         <Projects />
 
-        <motion.section
-          className="container mx-auto px-6 py-20"
-          id="timeline"
-          // from right to center
-          initial={{ x: -100 }}
-          whileInView={{ x: 0, transition: { duration: 0.5 } }}
-          transition={{ type: "spring", stiffness: 100, damping: 20 }}
-        >
+        <section className="container mx-auto px-6 py-20" id="timeline">
           <h2 className="text-4xl font-bold mb-8 dark:text-white">Timeline</h2>
 
           <div>
@@ -172,7 +158,7 @@ function App() {
               </ol>
             ))}
           </div>
-        </motion.section>
+        </section>
 
         <Contact />
       </body>

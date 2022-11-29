@@ -20,23 +20,9 @@ export default function Projects() {
 
   return (
     <>
-      <motion.section
+      <section
         className="container mx-auto px-6 py-20 dark:text-white"
         id="projects"
-        whileInView={{
-          x: 0,
-          transition: {
-            duration: 0.5,
-          },
-        }}
-        initial={{
-          x: 100,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 100,
-          damping: 20,
-        }}
       >
         <h2 className="text-4xl font-bold mb-8">Projects</h2>
         <div className="flex flex-wrap -mx-6">
@@ -56,7 +42,7 @@ export default function Projects() {
             {showAll ? "Show Less" : "Show All"}
           </motion.button>
         </div>
-      </motion.section>
+      </section>
       {selectedProject && (
         <ProjectModal project={selectedProject} onClose={handleClose} />
       )}
