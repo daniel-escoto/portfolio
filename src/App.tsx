@@ -88,9 +88,9 @@ function App() {
 
           <div>
             {timeline.map((event: Event) => (
-              <ol className="flex flex-col md:flex-row relative border-l border-stone-200 dark:border-stone-800">
+              <ol className="flex flex-col md:flex-row relative border-l border-stone-200 dark:border-stone-600">
                 <li className="mb-10 ml-4">
-                  <div className="absolute w-3 h-3 bg-stone-200 dark:bg-stone-800 rounded-full mt-1.5 -left-1.5 border border-white dark:border-black"></div>
+                  <div className="absolute w-3 h-3 bg-stone-200 dark:bg-stone-500 rounded-full mt-1.5 -left-1.5 border border-white dark:border-stone-600"></div>
                   <div className="flex flex-row items-center flex-wrap">
                     <div
                       className={`text-sm text-white dark:text-black font-semibold rounded-full px-3 py-1 mr-2 ${
@@ -106,7 +106,7 @@ function App() {
                       {event.title}
                     </div>
 
-                    <div className="text-sm text-gray-500 font-semibold ml-2">
+                    <div className="text-sm text-gray-500 ml-2 dark:text-gray-400">
                       ({getDuration(event)})
                     </div>
                   </div>
@@ -114,10 +114,10 @@ function App() {
                   <ul className="ml-6 mt-2 list-disc list-inside">
                     {event.description.map((desc) => (
                       <li className="flex items-start mb-2">
-                        <div className="text-gray-500 text-sm font-semibold mr-2">
+                        <div className="text-sm text-gray-500 font-semibold mr-2">
                           •
                         </div>
-                        <div className="text-gray-500 text-sm font-semibold">
+                        <div className="text-sm text-gray-800 dark:text-gray-200">
                           {desc}
                         </div>
                       </li>
