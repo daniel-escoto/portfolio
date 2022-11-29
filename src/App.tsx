@@ -38,9 +38,6 @@ function App() {
       </header>
 
       <body className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* scroll triggered animation */}
-        {/* fade in with motion from left to center when entering viewport */}
-        {/* fade out and motion to right when leaving viewport */}
         <div className="flex flex-col justify-center items-center">
           <section className="hero">
             <div className="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-between">
@@ -58,14 +55,11 @@ function App() {
                 </p>
 
                 <div className="flex flex-row space-x-4 mt-8">
-                  {/* use motion */}
-
                   <motion.a
                     href="https://www.linkedin.com/in/danescoto/"
                     className="bg-blue-600  text-white font-bold py-2 px-4 rounded border border-blue-700 dark:bg-blue-700 dark:border-blue-900"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    transition={{ type: "spring", stiffness: 400 }}
                     target="_blank"
                   >
                     LinkedIn
@@ -75,7 +69,6 @@ function App() {
                     className="bg-gray-600  text-white font-bold py-2 px-4 rounded border border-gray-700 dark:bg-gray-700  dark:border-gray-900"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    transition={{ type: "spring", stiffness: 400 }}
                     target="_blank"
                   >
                     GitHub
@@ -85,7 +78,6 @@ function App() {
                     className="bg-green-600  text-white font-bold py-2 px-4 rounded border border-green-700 dark:bg-green-700  dark:border-green-900"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    transition={{ type: "spring", stiffness: 400 }}
                     target="_blank"
                   >
                     Resume
@@ -98,8 +90,6 @@ function App() {
                   className="rounded-full w-36 h-36 mb-8 md:mb-0 md:w-48 md:h-48"
                   src={MyImage}
                   alt="Daniel Escoto"
-                  // slowly float up and down
-                  // move up and then move down
                   animate={{
                     y: [0, -10, 0],
                   }}
