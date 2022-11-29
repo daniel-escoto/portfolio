@@ -94,10 +94,21 @@ function App() {
               </div>
 
               <div className="flex-none flex items-center justify-center">
-                <img
+                <motion.img
                   className="rounded-full w-36 h-36 mb-8 md:mb-0 md:w-48 md:h-48"
                   src={MyImage}
                   alt="Daniel Escoto"
+                  // slowly float up and down
+                  // move up and then move down
+                  animate={{
+                    y: [0, -10, 0],
+                  }}
+                  transition={{
+                    duration: 5,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
                 />
               </div>
             </div>
