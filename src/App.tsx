@@ -49,21 +49,21 @@ function App() {
               <div className="flex flex-row space-x-4 mt-8">
                 <a
                   href="https://www.linkedin.com/in/danescoto/"
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded border border-blue-700 dark:bg-blue-700 dark:hover:bg-blue-900 dark:border-blue-900"
                   target="_blank"
                 >
                   LinkedIn
                 </a>
                 <a
                   href="https://github.com/daniel-escoto"
-                  className="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+                  className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded border border-gray-700 dark:bg-gray-700 dark:hover:bg-gray-900 dark:border-gray-900"
                   target="_blank"
                 >
                   GitHub
                 </a>
                 <a
                   href="https://drive.google.com/file/d/19fMGdeaoa_JtYFSLVOdcyWxUBNImW84m/view?usp=sharing"
-                  className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
+                  className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded border border-green-700 dark:bg-green-700 dark:hover:bg-green-900 dark:border-green-900"
                   target="_blank"
                 >
                   Resume
