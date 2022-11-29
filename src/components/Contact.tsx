@@ -67,7 +67,7 @@ export default function Contact() {
           <div className="md:flex md:items-center">
             <div className="md:w-1/3">
               <motion.button
-                className="shadow bg-stone-500 hover:bg-stone-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                className="shadow bg-stone-500  focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                 type="submit"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
