@@ -4,40 +4,12 @@ import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import { timeline, Event, getDuration } from "./data/timeline";
 import { motion } from "framer-motion";
+import Layout from "./layouts/Layout";
 
 function App() {
   return (
-    <>
-      <header className="flex justify-end items-center px-6 py-4">
-        <nav className="flex space-x-4">
-          <motion.a
-            href="#projects"
-            className="text-gray-800 dark:text-gray-200"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Projects
-          </motion.a>
-          <motion.a
-            href="#timeline"
-            className="text-gray-800 dark:text-gray-200"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Timeline
-          </motion.a>
-          <motion.a
-            href="#contact"
-            className="text-gray-800 dark:text-gray-200"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Contact
-          </motion.a>
-        </nav>
-      </header>
-
-      <body className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Layout>
+      <>
         <div className="flex flex-col justify-center items-center">
           <section className="hero">
             <div className="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-between">
@@ -162,16 +134,8 @@ function App() {
         </section>
 
         <Contact />
-      </body>
-      <footer className="bg-gray-100 dark:bg-gray-800">
-        <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center">
-          {/* Daniel Escoto */}
-          <p className="text-center text-gray-500 dark:text-gray-400">
-            Made with ❤️ by Daniel Escoto
-          </p>
-        </div>
-      </footer>
-    </>
+      </>
+    </Layout>
   );
 }
 
