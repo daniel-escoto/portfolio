@@ -7,12 +7,16 @@ export default function Header() {
   return (
     <header className="flex justify-between items-center px-6 py-4">
       <Link to="/">
-        <p className="text-2xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-          {location.pathname !== "/" ? "Daniel Escoto" : ""}
-          {location.pathname === "/blog" ? (
-            <span className="text-gray-500 dark:text-gray-400 italic font-light mt-2">
-              /blog
-            </span>
+        <p className="text-2xl font-bold text-gray-800 dark:text-white ">
+          <span className="hover:text-gray-700 dark:hover:text-gray-300">
+            {location.pathname !== "/" ? "Daniel Escoto" : ""}
+          </span>
+          {location.pathname.includes("/blog") ? (
+            <Link to="/blog">
+              <span className="text-gray-500 dark:text-gray-400 italic font-light hover:text-gray-700 dark:hover:text-gray-300">
+                /blog
+              </span>
+            </Link>
           ) : (
             ""
           )}

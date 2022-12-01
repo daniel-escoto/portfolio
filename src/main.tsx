@@ -1,10 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import NotFound from "./NotFound";
 import Blog from "./blog/Blog";
+import {
+  blogPosts,
+  getBlogPostId,
+  BlogPost as BlogPostInterface,
+} from "./data/blog";
+import BlogPost from "./blog/BlogPost";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +21,11 @@ const router = createBrowserRouter([
     path: "/blog",
     element: <Blog />,
   },
-  // use not found
+  // TODO: add a route for each blog post
+  ...blogPosts.map((post: BlogPostInterface) => ({
+    path: `/blog/${getBlogPostId(post)}`,
+    element: <BlogPost post={post} />,
+  })),
   {
     path: "*",
     element: <NotFound />,

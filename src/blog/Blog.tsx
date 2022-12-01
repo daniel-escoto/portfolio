@@ -1,12 +1,10 @@
 import Layout from "../layouts/Layout";
 import { blogPosts, BlogPost, getBlogPostId } from "../data/blog";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Blog() {
   // functions for navigation
-  function navigateToBlogPost(id: string) {
-    window.location.href = `/blog/${id}`;
-  }
 
   return (
     <Layout>
@@ -25,17 +23,22 @@ export default function Blog() {
                   {post.title}
                 </h2>
                 <p className="text-gray-500 dark:text-gray-400">
-                  {post.content}
+                  {post.content.length > 100
+                    ? post.content.substring(0, 100) + "..."
+                    : post.content}
                 </p>
                 <div className="flex justify-end mt-4">
-                  <motion.a
-                    href={`/blog/${getBlogPostId(post)}`}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
+                  <Link
+                    to={`/blog/${getBlogPostId(post)}`}
                     className="bg-gray-600 text-white font-bold py-2 px-4 rounded border border-gray-700 dark:bg-gray-700 dark:border-gray-900"
                   >
-                    Read More
-                  </motion.a>
+                    <motion.p
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      Read More
+                    </motion.p>
+                  </Link>
                 </div>
               </div>
             ))}
