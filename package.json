@@ -16,9 +16,11 @@
     "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^2.0.12",
     "@tailwindcss/line-clamp": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.8",
     "framer-motion": "^7.6.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.4",
     "react-router-dom": "^6.4.4"
   },
   "devDependencies": {
