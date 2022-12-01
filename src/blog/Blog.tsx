@@ -13,7 +13,7 @@ export default function Blog() {
         <div className="flex flex-col items-center">
           <h1 className="text-6xl font-bold mt-20 dark:text-gray-200">Blog</h1>
           <p className="text-xl mt-5 dark:text-gray-200">
-            {blogPosts.length} Posts
+            {blogPosts.length} Post{blogPosts.length === 1 ? "" : "s"}
           </p>
 
           {/* blog posts */}
