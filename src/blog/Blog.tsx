@@ -1,64 +1,47 @@
+import Layout from "../layouts/Layout";
+import { blogPosts, BlogPost, getBlogPostId } from "../data/blog";
+import { motion } from "framer-motion";
+
 export default function Blog() {
+  // functions for navigation
+  function navigateToBlogPost(id: string) {
+    window.location.href = `/blog/${id}`;
+  }
+
   return (
-    <>
-      <body className="bg-gray-100 dark:bg-gray-800">
-        <header className="bg-white dark:bg-gray-900 shadow">
-          <div className="container mx-auto px-6 py-2 flex items-center justify-between">
-            <a
-              className="font-bold text-2xl lg:text-4xl text-gray-800 dark:text-white"
-              href="#"
-            >
-              Daniel Escoto
-            </a>
-            <nav className="space-x-4">
-              <a
-                className="font-bold text-lg text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400"
-                href="#"
-              >
-                Home
-              </a>
-              <a
-                className="font-bold text-lg text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400"
-                href="#"
-              >
-                Blog
-              </a>
-              <a
-                className="font-bold text-lg text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400"
-                href="#"
-              >
-                Projects
-              </a>
-              <a
-                className="font-bold text-lg text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400"
-                href="#"
-              >
-                About
-              </a>
-            </nav>
-          </div>
-        </header>
-        <section className="container mx-auto px-6 py-8">
-          <h3 className="text-gray-700 dark:text-gray-200 text-2xl font-medium">
-            Blog
-          </h3>
-          <div className="mt-4">
-            <div className="flex items-center">
-              <div className="text-sm text-gray-500 font-semibold">
-                <time dateTime="2021-01-01">January 1, 2021</time>
+    <Layout>
+      <>
+        <h1 className="text-6xl font-bold text-center mt-20 dark:text-gray-200">
+          Blog
+        </h1>
+        <p className="text-2xl text-center mt-10 dark:text-gray-200">
+          My thoughts on web development, design, and more.
+        </p>
+        <div className="flex justify-center mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {blogPosts.map((post: BlogPost) => (
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4">
+                <h2 className="text-2xl font-bold dark:text-white">
+                  {post.title}
+                </h2>
+                <p className="text-gray-500 dark:text-gray-400">
+                  {post.content}
+                </p>
+                <div className="flex justify-end mt-4">
+                  <motion.a
+                    href={`/blog/${getBlogPostId(post)}`}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="bg-gray-600 text-white font-bold py-2 px-4 rounded border border-gray-700 dark:bg-gray-700 dark:border-gray-900"
+                  >
+                    Read More
+                  </motion.a>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
-      </body>
-      <footer className="bg-gray-100 dark:bg-gray-800">
-        <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center">
-          {/* Daniel Escoto */}
-          <p className="text-center text-gray-500 dark:text-gray-400">
-            Made with ❤️ by Daniel Escoto
-          </p>
         </div>
-      </footer>
-    </>
+      </>
+    </Layout>
   );
 }

@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import "./index.css";
+import NotFound from "./NotFound";
+import Blog from "./blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -11,7 +13,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/blog",
-    element: <p>Blog coming soon</p>,
+    element: <Blog />,
+  },
+  // use not found
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
