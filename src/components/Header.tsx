@@ -6,11 +6,17 @@ export default function Header() {
 
   return (
     <header className="flex justify-between items-center px-6 py-4">
-      <Link
-        to="/"
-        className="text-2xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
-      >
-        {location.pathname !== "/" ? "Daniel Escoto" : ""}
+      <Link to="/">
+        <p className="text-2xl font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
+          {location.pathname !== "/" ? "Daniel Escoto" : ""}
+          {location.pathname === "/blog" ? (
+            <span className="text-gray-500 dark:text-gray-400 italic font-light mt-2">
+              /blog
+            </span>
+          ) : (
+            ""
+          )}
+        </p>
       </Link>
       <nav className="flex space-x-4">
         {/* TODO: convert these to links */}
