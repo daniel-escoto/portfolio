@@ -20,7 +20,7 @@ export default function BlogPost({ post }: Props) {
       </h1>
       <p className="text-xl mt-5 dark:text-gray-200">{formattedDate}</p>
       {/* large prose markdown */}
-      <div className="prose dark:prose-dark max-w-none mt-10">
+      <div className="prose max-w-none mt-10 dark:prose-invert">
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </div>
     </Layout>
