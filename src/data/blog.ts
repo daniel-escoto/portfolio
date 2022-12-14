@@ -1,14 +1,19 @@
+import chatGPTLeetcode from "../assets/using-chatgpt-to-write-leetcode-solutions.md";
+
 export interface BlogPost {
   title: string;
   date: Date;
-  content: string;
+  markdownFileName: string;
+  preview: string;
 }
 
 export const blogPosts: BlogPost[] = [
   {
-    title: "My first blog post",
-    date: new Date("2022-11-30"),
-    content: ``,
+    title: "Using ChatGPT to Write Leetcode Solutions",
+    date: new Date("2022-12-14"),
+    markdownFileName: chatGPTLeetcode,
+    preview:
+      "Find out how I used ChatGPT to write Leetcode solutions and how you can do it too!",
   },
 ];
 
