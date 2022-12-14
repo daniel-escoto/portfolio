@@ -15,15 +15,14 @@ function App() {
             <div className="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-between">
               <div className="md:mr-6 dark:text-white">
                 <h2 className="text-4xl font-bold ">Daniel Escoto</h2>
-                <h3 className="text-2xl mt-2 mb-8">
-                  SF Bay Area Software Engineer
-                </h3>
+                <h3 className="text-2xl mt-2 mb-8">Software Engineer</h3>
                 <p>
-                  I'm a software engineer based in the SF Bay Area. I enjoy
-                  building things that live on the internet, whether that be
-                  websites, mobile applications, or anything in between. My goal
-                  is to always build products that provide pixel-perfect,
-                  performant experiences.
+                  I'm a software engineer. I enjoy building things that live on
+                  the internet, whether that be websites, mobile applications,
+                  or anything in between. My goal is to always build products
+                  that provide pixel-perfect, performant experiences. Besides
+                  programming, I enjoy learning about new technologies, brewing
+                  espresso, spending time with my dog, and travelling.
                 </p>
 
                 <div className="flex flex-row space-x-4 mt-8">
