@@ -5,12 +5,9 @@ import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
 export default function Blog() {
-  // functions for navigation
-
   return (
     <Layout>
       <>
-        {/* just show a listing of my blog posts */}
         <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center">
           <h1 className="text-6xl font-bold mt-20 dark:text-gray-200">Blog</h1>
         </div>
@@ -23,7 +20,6 @@ export default function Blog() {
                     {post.title}
                   </h2>
                 </Link>
-                {/* format the date */}
                 <p className="text-xl mt-5 dark:text-gray-200">
                   {new Date(post.date).toLocaleDateString("en-US", {
                     year: "numeric",
