@@ -1,4 +1,4 @@
-import { BlogPost as BlogPostInterface, blogPosts } from "../data/blog";
+import { BlogPost as BlogPostInterface } from "../data/blog";
 import Layout from "../layouts/Layout";
 import ReactMarkdown from "react-markdown";
 import { useEffect, useState } from "react";
@@ -8,6 +8,8 @@ interface Props {
 }
 
 export default function BlogPost({ post }: Props) {
+  const markdownFilePath = `../markdown/${post.markdownFileName}`;
+
   const [content, setContent] = useState("");
   const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
     year: "numeric",
@@ -16,13 +18,13 @@ export default function BlogPost({ post }: Props) {
   });
 
   useEffect(() => {
-    const fetchContent = async () => {
-      const response = await fetch(post.markdownFileName);
-      const text = await response.text();
-      setContent(text);
-    };
-    fetchContent();
-  }, [post.markdownFileName]);
+    import(markdownFilePath).then((module) => {
+      fetch(module.default)
+        .then((response) => response.text())
+        .then((text) => setContent(text))
+        .catch((error) => console.error(error));
+    });
+  }, [markdownFilePath]);
 
   return (
     <Layout>
@@ -30,7 +32,6 @@ export default function BlogPost({ post }: Props) {
         {post.title}
       </h1>
       <p className="text-xl mt-5 dark:text-gray-200">{formattedDate}</p>
-      {/* large prose markdown */}
       <div className="prose max-w-none mt-10 dark:prose-invert pb-20">
         <ReactMarkdown>{content}</ReactMarkdown>
       </div>
