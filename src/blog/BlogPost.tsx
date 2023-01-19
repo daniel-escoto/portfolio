@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function BlogPost({ post }: Props) {
-  const markdownFilePath = `../markdown/module-${post.markdownFileName}`;
+  const markdownFilePath = `../assets/module-${post.markdownFileName}`;
 
   const [content, setContent] = useState("");
   const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
