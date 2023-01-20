@@ -1,7 +1,9 @@
+import UsingChatGPT from "./blog-posts/ChatGPTLeetcodeSolutions.mdx";
+
 export interface BlogPost {
   title: string;
   date: Date;
-  markdownFileName: string;
+  content: JSX.Element;
   preview: string;
 }
 
@@ -9,7 +11,7 @@ export const blogPosts: BlogPost[] = [
   {
     title: "Using ChatGPT to Write Leetcode Solutions",
     date: new Date("2022-12-14"),
-    markdownFileName: "using-chatgpt-to-write-leetcode-solutions.md",
+    content: <UsingChatGPT />,
     preview:
       "Find out how I used ChatGPT to write Leetcode solutions and how you can do it too!",
   },
