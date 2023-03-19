@@ -22,7 +22,16 @@ function App() {
                   My goal is to always build products that provide
                   pixel-perfect, performant experiences. Besides programming, I
                   enjoy learning about new technologies, brewing espresso,
-                  spending time with my dog, and travelling.
+                  spending time with my dog, and travelling. I am currently
+                  working at{" "}
+                  <a
+                    href="https://www.frontdoorhome.com/"
+                    className="text-blue-600 dark:text-blue-400"
+                    target="_blank"
+                  >
+                    Frontdoor
+                  </a>{" "}
+                  as a Software Engineer.
                 </p>
 
                 <div className="flex flex-row space-x-4 mt-8">

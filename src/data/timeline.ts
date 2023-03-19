@@ -9,6 +9,29 @@ export interface Event {
 
 export const timeline: Event[] = [
   {
+    title: "Software Engineer at Frontdoor",
+    description: [
+      "Quickly learned Frontdoor's codebase and development process, contributing to several bug fixes and small feature enhancements using Visual Studio and C#.",
+      "Assisted in the development and maintenance of Frontdoor's microservice architecture using Golang and Kafka, contributing to bug fixes and small feature enhancements and gaining hands-on experience with these technologies.",
+      "Built several small components in React and Angular, and helped to integrate them into Frontdoor's main product.",
+      "Demonstrated strong communication and teamwork skills, actively participating in daily standups and code reviews, and effectively communicating with other team members to resolve issues and complete tasks.",
+      "Showed a willingness to learn and take on new challenges, actively seeking out opportunities to expand knowledge and skills in various programming languages and technologies.",
+    ],
+    startDate: new Date(2023, 1, 5),
+    endDate: null,
+    tags: [
+      "React",
+      "Angular",
+      "C#",
+      "Visual Studio",
+      "Golang",
+      "Splunk",
+      "Kafka",
+      "Git",
+    ],
+    url: "https://www.frontdoor.com/",
+  },
+  {
     title: "Software Engineer at Perform",
     description: [
       "Engineered a running coach management system for 40+ coaches to manage 300+ paying athletes, using Typescript React",
