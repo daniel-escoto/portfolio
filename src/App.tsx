@@ -17,21 +17,21 @@ function App() {
                 <h2 className="text-4xl font-bold ">Daniel Escoto</h2>
                 <h3 className="text-2xl mt-2 mb-8">Software Engineer</h3>
                 <p>
-                  I enjoy building things that live on the internet, whether
-                  that be websites, mobile applications, or anything in between.
-                  My goal is to always build products that provide
-                  pixel-perfect, performant experiences. Besides programming, I
-                  enjoy learning about new technologies, brewing espresso,
-                  spending time with my dog, and travelling. I am currently
-                  working at{" "}
+                  I am passionate about creating impactful digital solutions,
+                  particularly in frontend development, from websites to mobile
+                  applications. I enjoy making well-thought-out, accessible, and
+                  visually appealing user interfaces that deliver seamless,
+                  high-performance user experiences. Beyond coding, I enjoy
+                  exploring emerging technologies, cooking, spending time with
+                  my dog, and traveling. Currently, I am a Software Engineer at{" "}
                   <a
                     href="https://www.frontdoorhome.com/"
                     className="text-blue-600 dark:text-blue-400"
                     target="_blank"
                   >
                     Frontdoor
-                  </a>{" "}
-                  as a Software Engineer.
+                  </a>
+                  .
                 </p>
 
                 <div className="flex flex-row space-x-4 mt-8">
@@ -85,7 +85,8 @@ function App() {
           </section>
         </div>
 
-        <Projects />
+        {/* TODO: bring back */}
+        {/* <Projects /> */}
 
         <section className="container mx-auto px-6 py-20" id="timeline">
           <h2 className="text-4xl font-bold mb-8 dark:text-white">Timeline</h2>

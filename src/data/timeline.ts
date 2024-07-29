@@ -11,23 +11,37 @@ export const timeline: Event[] = [
   {
     title: "Software Engineer at Frontdoor",
     description: [
-      "Quickly learned Frontdoor's codebase and development process, contributing to several bug fixes and small feature enhancements using Visual Studio and C#.",
-      "Assisted in the development and maintenance of Frontdoor's microservice architecture using Golang and Kafka, contributing to bug fixes and small feature enhancements and gaining hands-on experience with these technologies.",
-      "Built several small components in React and Angular, and helped to integrate them into Frontdoor's main product.",
-      "Demonstrated strong communication and teamwork skills, actively participating in daily standups and code reviews, and effectively communicating with other team members to resolve issues and complete tasks.",
-      "Showed a willingness to learn and take on new challenges, actively seeking out opportunities to expand knowledge and skills in various programming languages and technologies.",
+      "Enhanced email delivery systems by enabling multi-recipient dispatch functionality, significantly improving operational efficiency.",
+      "Upgraded messaging services to a newer Kafka platform, resulting in faster processing speeds and increased system resilience.",
+      "Instituted masked email logging, ensuring privacy compliance and comprehensive auditability of communications.",
+      "Introduced secure configuration management, enhancing security and operational reliability across multiple environments.",
+      "Temporarily changed teams to contribute to the development of a flagship app set for launch soon, using React Native, TypeScript, and Expo.",
+      "Focused on implementing a theme library used by multiple services, ensuring consistent design and user experience across applications.",
+      "Collaborated closely with designers, product managers, and other engineers to deliver a seamless user experience.",
+      "Conducted extensive testing and debugging to optimize performance and ensure app stability.",
+      "Participated in code reviews and provided mentorship to junior developers, maintaining high coding standards.",
     ],
     startDate: new Date(2023, 1, 5),
     endDate: null,
     tags: [
       "React",
+      "React Native",
+      "TypeScript",
       "Angular",
+      "HTML",
+      "CSS",
+      "Tailwind",
       "C#",
-      "Visual Studio",
       "Golang",
-      "Splunk",
       "Kafka",
+      "Node.js",
+      "Visual Studio",
       "Git",
+      "Splunk",
+      "AWS",
+      "Docker",
+      "Jest",
+      "Expo",
     ],
     url: "https://www.frontdoor.com/",
   },
@@ -106,7 +120,7 @@ export const timeline: Event[] = [
   },
 ];
 
-// given a event, return its duration in string form
+// Given an event, return its duration in string form
 export function getDuration(event: Event): string {
   const start = event.startDate;
   const end = event.endDate ?? new Date();

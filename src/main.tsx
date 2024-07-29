@@ -17,15 +17,15 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
   },
-  {
-    path: "/blog",
-    element: <Blog />,
-  },
-  // TODO: add a route for each blog post
-  ...blogPosts.map((post: BlogPostInterface) => ({
-    path: `/blog/${getBlogPostId(post)}`,
-    element: <BlogPost post={post} />,
-  })),
+  // {
+  //   path: "/blog",
+  //   element: <Blog />,
+  // },
+  // // TODO: add a route for each blog post
+  // ...blogPosts.map((post: BlogPostInterface) => ({
+  //   path: `/blog/${getBlogPostId(post)}`,
+  //   element: <BlogPost post={post} />,
+  // })),
   {
     path: "*",
     element: <NotFound />,
