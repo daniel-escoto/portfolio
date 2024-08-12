@@ -14,7 +14,7 @@ function App() {
           <section className="hero">
             <div className="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-between">
               <div className="md:mr-6 dark:text-white">
-                <h2 className="text-4xl font-bold ">Daniel Escoto</h2>
+                <h2 className="text-4xl font-bold">Daniel Escoto</h2>
                 <h3 className="text-2xl mt-2 mb-8">Software Engineer</h3>
                 <p>
                   I am passionate about creating impactful digital solutions,
@@ -28,6 +28,7 @@ function App() {
                     href="https://www.frontdoorhome.com/"
                     className="text-blue-600 dark:text-blue-400"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Frontdoor
                   </a>
@@ -41,6 +42,7 @@ function App() {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     LinkedIn
                   </motion.a>
@@ -50,15 +52,17 @@ function App() {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     GitHub
                   </motion.a>
                   <motion.a
-                    href="https://drive.google.com/file/d/19fMGdeaoa_JtYFSLVOdcyWxUBNImW84m/view?usp=sharing"
+                    href="/resume.pdf"
                     className="bg-green-600  text-white font-bold py-2 px-4 rounded border border-green-700 dark:bg-green-700  dark:border-green-900"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Resume
                   </motion.a>
@@ -93,7 +97,10 @@ function App() {
 
           <div>
             {timeline.map((event: Event) => (
-              <ol className="flex flex-col md:flex-row relative border-l border-stone-200 dark:border-stone-600">
+              <ol
+                className="flex flex-col md:flex-row relative border-l border-stone-200 dark:border-stone-600"
+                key={event.title}
+              >
                 <li className="mb-10 ml-4">
                   <div className="absolute w-3 h-3 bg-stone-200 dark:bg-stone-500 rounded-full mt-1.5 -left-1.5 border border-white dark:border-stone-600"></div>
                   <div className="flex flex-row items-center flex-wrap">
@@ -118,7 +125,7 @@ function App() {
 
                   <ul className="ml-6 mt-2 list-disc list-inside">
                     {event.description.map((desc) => (
-                      <li className="flex items-start mb-2">
+                      <li className="flex items-start mb-2" key={desc}>
                         <div className="text-sm text-gray-500 font-semibold mr-2">
                           •
                         </div>
@@ -131,7 +138,10 @@ function App() {
 
                   <div className="flex flex-wrap ml-6 mt-2">
                     {event.tags.map((tag) => (
-                      <span className="inline-block bg-gray-200 dark:bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mt-2">
+                      <span
+                        className="inline-block bg-gray-200 dark:bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mt-2"
+                        key={tag}
+                      >
                         {tag}
                       </span>
                     ))}
