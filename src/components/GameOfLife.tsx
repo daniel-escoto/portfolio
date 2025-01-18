@@ -1,6 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import GameControls from "./GameControls";
 import { isDarkMode } from "../util";
 
 const GRID_SIZE = 30;
@@ -176,12 +175,12 @@ export default function GameOfLife() {
         />
       </motion.div>
 
-      <GameControls
+      {/* <GameControls
         isRunning={isRunning}
         onToggleRunning={handleToggleRunning}
         onClear={handleClear}
         onRandom={handleRandom}
-      />
+      /> */}
     </div>
   );
 }
