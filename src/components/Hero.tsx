@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import MyImage from "../assets/me3.jpeg";
 import GameOfLife from "./GameOfLife";
+import Link from "./Link";
 
 export default function Hero() {
   return (
@@ -29,36 +29,25 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-row space-x-4 mt-8">
-            <motion.a
+            <Link
               href="https://www.linkedin.com/in/danescoto/"
               className="bg-blue-600  text-white font-bold py-2 px-4 rounded border border-blue-700 dark:bg-blue-700 dark:border-blue-900"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               LinkedIn
-            </motion.a>
-            <motion.a
+            </Link>
+
+            <Link
               href="https://github.com/daniel-escoto"
               className="bg-gray-600  text-white font-bold py-2 px-4 rounded border border-gray-700 dark:bg-gray-700  dark:border-gray-900"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               GitHub
-            </motion.a>
-            <motion.a
+            </Link>
+            <Link
               href="/resume.pdf"
               className="bg-green-600  text-white font-bold py-2 px-4 rounded border border-green-700 dark:bg-green-700  dark:border-green-900"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Resume
-            </motion.a>
+            </Link>
           </div>
         </div>
 
