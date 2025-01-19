@@ -1,13 +1,13 @@
-export interface Event {
+export interface TimelineEvent {
   title: string;
+  startDate?: Date;
+  endDate?: Date;
   description: string[];
-  endDate: Date | null;
-  startDate: Date;
   tags: string[];
-  url: string;
+  url?: string;
 }
 
-export const timeline: Event[] = [
+export const timeline: TimelineEvent[] = [
   {
     title: "Software Engineer at Frontdoor",
     description: [
@@ -22,7 +22,7 @@ export const timeline: Event[] = [
       "Participated in code reviews and provided mentorship to junior developers, maintaining high coding standards.",
     ],
     startDate: new Date(2023, 1, 5),
-    endDate: null,
+    endDate: new Date(2025, 1, 31),
     tags: [
       "React",
       "React Native",
@@ -66,7 +66,6 @@ export const timeline: Event[] = [
       "Docker",
       "Swift",
     ],
-    url: "https://www.performgroup.com/",
   },
   {
     title: "Software Engineer at Tata Consultancy Services",
@@ -120,9 +119,8 @@ export const timeline: Event[] = [
   },
 ];
 
-// Given an event, return its duration in string form
-export function getDuration(event: Event): string {
-  const start = event.startDate;
+export function getDuration(event: TimelineEvent): string {
+  const start = event.startDate ?? new Date();
   const end = event.endDate ?? new Date();
   const diff = Math.abs(end.getTime() - start.getTime());
   const diffDays = Math.ceil(diff / (1000 * 3600 * 24));
