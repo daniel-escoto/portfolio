@@ -22,7 +22,7 @@ export const timeline: TimelineEvent[] = [
       "Participated in code reviews and provided mentorship to junior developers, maintaining high coding standards.",
     ],
     startDate: new Date(2023, 1, 5),
-    endDate: new Date(2025, 1, 31),
+    endDate: new Date(2025, 0, 31),
     tags: [
       "React",
       "React Native",
