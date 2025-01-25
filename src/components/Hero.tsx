@@ -22,10 +22,10 @@ export default function Hero() {
           <GameOfLife />
         </div>
         <div className="md:mr-6 dark:text-white">
-          <h2 className="text-6xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-100">
+          <h2 className="text-6xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r dark:from-white dark:to-gray-100 from-gray-900 to-gray-700">
             Daniel Escoto
           </h2>
-          <p className="text-xl text-gray-400 mb-6">
+          <p className="text-xl mb-6 dark:text-gray-400 text-gray-600">
             Founding Engineer & Early-Stage Startup Builder
           </p>
           <p className="text-lg leading-relaxed">
