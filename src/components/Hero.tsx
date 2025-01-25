@@ -2,21 +2,14 @@ import { motion } from "framer-motion";
 import GameOfLife from "./GameOfLife";
 import Link from "./Link";
 
-const HeroLink = ({
-  text,
-  href,
-  color,
-}: {
-  text: string;
-  href: string;
-  color: string;
-}) => {
+const HeroLink = ({ text, href }: { text: string; href: string }) => {
   return (
     <Link
       href={href}
-      className={`bg-${color}-600  text-white font-bold py-2 px-4 rounded border border-${color}-700 dark:bg-${color}-700  dark:border-${color}-900`}
+      className="relative font-medium text-gray-800 dark:text-gray-200 group"
     >
       {text}
+      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full group-hover:left-0 group-hover:translate-x-0" />
     </Link>
   );
 };
@@ -47,19 +40,13 @@ export default function Hero() {
             build something great together.
           </p>
 
-          <div className="flex flex-row space-x-4 mt-8">
+          <div className="flex flex-row items-start space-x-4 mt-8">
             <HeroLink
               text="LinkedIn"
               href="https://www.linkedin.com/in/danescoto/"
-              color="blue"
             />
 
-            <HeroLink
-              text="GitHub"
-              href="https://github.com/daniel-escoto"
-              color="gray"
-            />
-            <HeroLink text="Resume" href="/resume.pdf" color="green" />
+            <HeroLink text="GitHub" href="https://github.com/daniel-escoto" />
           </div>
         </div>
       </div>
