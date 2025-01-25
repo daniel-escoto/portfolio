@@ -9,8 +9,8 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   // { href: "#projects", label: "Projects" },
-  { href: "#timeline", label: "Timeline" },
-  { href: "#contact", label: "Contact" },
+  // { href: "#timeline", label: "Timeline" },
+  // { href: "#contact", label: "Contact" },
   // { href: "/blog", label: "Blog", isLink: true },
 ];
 
