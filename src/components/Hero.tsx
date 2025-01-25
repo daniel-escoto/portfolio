@@ -17,7 +17,7 @@ const HeroLink = ({ text, href }: { text: string; href: string }) => {
 export default function Hero() {
   return (
     <section className="flex flex-col justify-center items-center">
-      <div className="container mx-auto  py-20 flex flex-col md:flex-row items-between gap-10">
+      <div className="container mx-auto flex flex-col md:flex-row items-between gap-10">
         <div className="flex-none flex items-center justify-center">
           <GameOfLife />
         </div>
@@ -50,6 +50,7 @@ export default function Hero() {
               text="LinkedIn"
               href="https://www.linkedin.com/in/danescoto/"
             />
+
             <HeroLink text="GitHub" href="https://github.com/daniel-escoto" />
           </div>
         </div>
