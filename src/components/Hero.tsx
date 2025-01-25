@@ -2,6 +2,25 @@ import { motion } from "framer-motion";
 import GameOfLife from "./GameOfLife";
 import Link from "./Link";
 
+const HeroLink = ({
+  text,
+  href,
+  color,
+}: {
+  text: string;
+  href: string;
+  color: string;
+}) => {
+  return (
+    <Link
+      href={href}
+      className={`bg-${color}-600  text-white font-bold py-2 px-4 rounded border border-${color}-700 dark:bg-${color}-700  dark:border-${color}-900`}
+    >
+      {text}
+    </Link>
+  );
+};
+
 export default function Hero() {
   return (
     <section className="flex flex-col justify-center items-center">
@@ -29,25 +48,18 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-row space-x-4 mt-8">
-            <Link
+            <HeroLink
+              text="LinkedIn"
               href="https://www.linkedin.com/in/danescoto/"
-              className="bg-blue-600  text-white font-bold py-2 px-4 rounded border border-blue-700 dark:bg-blue-700 dark:border-blue-900"
-            >
-              LinkedIn
-            </Link>
+              color="blue"
+            />
 
-            <Link
+            <HeroLink
+              text="GitHub"
               href="https://github.com/daniel-escoto"
-              className="bg-gray-600  text-white font-bold py-2 px-4 rounded border border-gray-700 dark:bg-gray-700  dark:border-gray-900"
-            >
-              GitHub
-            </Link>
-            <Link
-              href="/resume.pdf"
-              className="bg-green-600  text-white font-bold py-2 px-4 rounded border border-green-700 dark:bg-green-700  dark:border-green-900"
-            >
-              Resume
-            </Link>
+              color="gray"
+            />
+            <HeroLink text="Resume" href="/resume.pdf" color="green" />
           </div>
         </div>
       </div>
