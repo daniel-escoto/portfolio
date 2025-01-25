@@ -22,8 +22,13 @@ export default function Hero() {
           <GameOfLife />
         </div>
         <div className="md:mr-6 dark:text-white">
-          <h2 className="text-4xl font-bold mb-4">Daniel Escoto</h2>
-          <p>
+          <h2 className="text-6xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-100">
+            Daniel Escoto
+          </h2>
+          <p className="text-xl text-gray-400 mb-6">
+            Founding Engineer & Early-Stage Startup Builder
+          </p>
+          <p className="text-lg leading-relaxed">
             I'm a Software Engineer focused on building early-stage startups.
             Previously, I was a founding engineer at Techstars-backed Perform.
             I'm currently joining Y Combinator-backed{" "}
@@ -45,7 +50,6 @@ export default function Hero() {
               text="LinkedIn"
               href="https://www.linkedin.com/in/danescoto/"
             />
-
             <HeroLink text="GitHub" href="https://github.com/daniel-escoto" />
           </div>
         </div>
