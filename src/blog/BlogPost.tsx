@@ -1,5 +1,4 @@
 import { BlogPost as BlogPostInterface } from "../data/blog";
-import Layout from "../layouts/Layout";
 import ReactMarkdown from "react-markdown";
 
 interface Props {
@@ -14,14 +13,17 @@ export default function BlogPost({ post }: Props) {
   });
 
   return (
-    <Layout>
-      <h1 className="text-6xl font-bold mt-20 dark:text-gray-200">
-        {post.title}
-      </h1>
-      <p className="text-xl mt-5 dark:text-gray-200">{formattedDate}</p>
-      <div className="prose max-w-none mt-10 dark:prose-invert pb-20">
-        {post.content}
+    <div className="min-h-screen w-full bg-[#050709] px-4 py-10 font-mono text-slate-200">
+      <div className="mx-auto max-w-4xl border border-slate-800 bg-[#0b1018] p-8">
+        <a href="/blog" className="text-xs text-slate-500 hover:text-emerald-300">
+          cd ../blog
+        </a>
+        <h1 className="mt-6 text-3xl text-emerald-300">{post.title}</h1>
+        <p className="mt-2 text-xs text-slate-500">{formattedDate}</p>
+        <div className="prose prose-invert mt-6 max-w-none">
+          <ReactMarkdown>{post.content}</ReactMarkdown>
+        </div>
       </div>
-    </Layout>
+    </div>
   );
 }

@@ -1,7 +1,7 @@
 import Chess from "../assets/qwik-chess.png";
 import AaronNavarro from "../assets/aaronnavarro.png";
 import Mirror from "../assets/mirror.png";
-import Portfolio from "../assets/portfolio.png";
+import PersonalSite from "../assets/personal-site.png";
 import SecretSanta from "../assets/secret_santa.png";
 
 export interface Project {
@@ -24,12 +24,11 @@ export const projects: Project[] = [
     github: "https://github.com/daniel-escoto/secret-santa",
   },
   {
-    name: "Portfolio Website",
+    name: "Personal Site",
     description:
-      "This website is built with React, Vite, and TypeScript. It is hosted on Netlify and uses GetForm for the contact form.",
-    image: Portfolio,
+      "Responsive site built with React, Vite, and TypeScript. It is hosted on Netlify and uses GetForm for the contact form.",
+    image: PersonalSite,
     tags: ["React", "TypeScript", "Vite", "Netlify", "GetForm"],
-    github: "https://github.com/daniel-escoto/portfolio",
   },
   {
     name: "Qwik-Chess",
@@ -42,7 +41,7 @@ export const projects: Project[] = [
   {
     name: "aaron-navarro.com",
     description:
-      "A photography portfolio website made with React and TypeScript. Features include a custom image gallery, a custom image viewer, and an easy to use admin panel.",
+      "A photography site made with React and TypeScript. Features include a custom image gallery, a custom image viewer, and an easy to use admin panel.",
     url: "https://aaronavarro.com/",
     image: AaronNavarro,
     tags: ["TypeScript", "React", "Firebase", "Bootstrap", "HTML", "CSS"],

@@ -1,41 +1,38 @@
-import Layout from "../layouts/Layout";
-import { blogPosts, BlogPost, getBlogPostId } from "../data/blog";
-import { motion } from "framer-motion";
+import { blogPosts, getBlogPostId } from "../data/blog";
 import { Link } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
 
 export default function Blog() {
   return (
-    <Layout>
-      <>
-        <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center">
-          <h1 className="text-6xl font-bold mt-20 dark:text-gray-200">Blog</h1>
-        </div>
-        <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center">
-          <div className="prose max-w-none mt-10 dark:prose-invert pb-20">
-            {blogPosts.map((post) => (
-              <div key={post.title}>
-                <Link to={`/blog/${getBlogPostId(post)}`}>
-                  <h2 className="text-4xl font-bold mt-20 dark:text-gray-200">
-                    {post.title}
-                  </h2>
+    <div className="min-h-screen w-full bg-[#050709] px-4 py-10 font-mono text-slate-200">
+      <div className="mx-auto max-w-4xl border border-slate-800 bg-[#0b1018] p-8">
+        <h1 className="text-3xl text-emerald-300">blog index</h1>
+        <p className="mt-3 text-sm text-slate-400">
+          notes, build logs, and experiments. pick a post to open the entry in the terminal view.
+        </p>
+
+        <div className="mt-8 space-y-6">
+          {blogPosts.map((post) => (
+            <article key={post.title} className="border border-slate-800 bg-[#050709] p-4 text-sm text-slate-200">
+              <Link to={`/blog/${getBlogPostId(post)}`} className="text-lg text-emerald-300 hover:underline">
+                {post.title}
+              </Link>
+              <p className="mt-2 text-xs text-slate-500">
+                {new Date(post.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </p>
+              <p className="mt-3 text-sm text-slate-300">
+                {post.preview}{" "}
+                <Link to={`/blog/${getBlogPostId(post)}`} className="text-emerald-300 hover:underline">
+                  read more
                 </Link>
-                <p className="text-xl mt-5 dark:text-gray-200">
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </p>
-                <p className="text-xl mt-5 dark:text-gray-200">
-                  {post.preview}{" "}
-                  <Link to={`/blog/${getBlogPostId(post)}`}>Read more...</Link>
-                </p>
-              </div>
-            ))}
-          </div>
+              </p>
+            </article>
+          ))}
         </div>
-      </>
-    </Layout>
+      </div>
+    </div>
   );
 }

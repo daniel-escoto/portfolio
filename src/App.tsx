@@ -1,18 +1,6 @@
 import "./App.css";
-import Layout from "./layouts/Layout";
-import Hero from "./components/Hero";
+import TerminalUI from "./components/TerminalUI";
 
-function App() {
-  return (
-    <Layout>
-      <>
-        <Hero />
-        {/* TODO: bring back */}
-        {/* <Projects /> */}
-        {/* <Timeline /> */}
-      </>
-    </Layout>
-  );
+export default function App() {
+  return <TerminalUI />;
 }
-
-export default App;
