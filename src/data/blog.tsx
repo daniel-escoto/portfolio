@@ -3,7 +3,7 @@ import UsingChatGPT from "./blog-posts/ChatGPTLeetcodeSolutions.mdx";
 export interface BlogPost {
   title: string;
   date: Date;
-  content: JSX.Element;
+  content: string | JSX.Element;
   preview: string;
 }
 

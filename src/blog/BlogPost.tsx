@@ -21,7 +21,11 @@ export default function BlogPost({ post }: Props) {
         <h1 className="mt-6 text-3xl text-emerald-300">{post.title}</h1>
         <p className="mt-2 text-xs text-slate-500">{formattedDate}</p>
         <div className="prose prose-invert mt-6 max-w-none">
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+          {typeof post.content === "string" ? (
+            <ReactMarkdown>{post.content}</ReactMarkdown>
+          ) : (
+            post.content
+          )}
         </div>
       </div>
     </div>
