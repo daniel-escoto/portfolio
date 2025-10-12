@@ -1,6 +1,6 @@
 import "./App.css";
-import TerminalUI from "./components/TerminalUI";
+import Screensaver from "./components/Screensaver";
 
 export default function App() {
-  return <TerminalUI />;
+  return <Screensaver />;
 }
