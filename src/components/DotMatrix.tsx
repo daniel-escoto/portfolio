@@ -9,7 +9,6 @@ interface DotMatrixProps {
 }
 
 const defaultConfig: Required<DotMatrixConfig> = {
-  // TODO: handle dark mode
   dotSize: 4,
   dotSpacing: 10,
   dotColor: '#000000',

@@ -15,6 +15,10 @@ export default function App() {
     return { dotSize, dotSpacing };
   });
 
+  const [isDarkMode, setIsDarkMode] = useState(
+    () => window.matchMedia('(prefers-color-scheme: dark)').matches
+  );
+
   useEffect(() => {
     const handleResize = () => {
       const vw = window.innerWidth;
@@ -32,15 +36,23 @@ export default function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e: MediaQueryListEvent) => setIsDarkMode(e.matches);
+    
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
   return (
     <DotMatrix
       config={{
         dotSize: dotConfig.dotSize,
         dotSpacing: dotConfig.dotSpacing,
-        dotColor: "#000000",
-        offDotColor: "#f5f5f5",
-        backgroundColor: "#ffffff",
-        glowEffect: false,
+        dotColor: isDarkMode ? "#ffffff" : "#000000",
+        offDotColor: isDarkMode ? "#2a2a2a" : "#f5f5f5",
+        backgroundColor: isDarkMode ? "#000000" : "#ffffff",
+        glowEffect: isDarkMode,
       }}
     >
       <DotMatrixText
