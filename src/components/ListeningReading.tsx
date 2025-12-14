@@ -92,11 +92,14 @@ export default function ListeningReading() {
   );
 
   return (
-    <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    <div
+      id="library"
+      className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16"
+    >
       <div className="max-w-2xl w-full">
         {/* Subheader */}
         <h2 className="text-2xl sm:text-3xl font-normal tracking-tight text-gray-900 dark:text-white mb-6">
-          Listening & Reading
+          My Library
         </h2>
         {/* Tab Navigation */}
         <div className="flex space-x-6 mb-8 border-b border-gray-200 dark:border-gray-800">
@@ -153,7 +156,7 @@ export default function ListeningReading() {
                 key={index}
                 className="group transition-transform hover:scale-105"
               >
-                <div className="aspect-[2/3] mb-2 rounded overflow-hidden bg-gray-100 dark:bg-gray-900">
+                <div className="aspect-2/3 mb-2 rounded overflow-hidden bg-gray-100 dark:bg-gray-900">
                   <img
                     src={item.coverImage}
                     alt={`${item.title} by ${item.author}`}
