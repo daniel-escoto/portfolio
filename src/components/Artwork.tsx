@@ -22,10 +22,9 @@ export default function Artwork() {
       <div className="max-w-lg mx-auto">
         <img
           src={isDark ? "/artwork_dark.jpg" : "/artwork_light.jpg"}
-          alt=""
+          alt={`${artwork.title} by ${artwork.artist}, ${artwork.date}`}
           className="w-full h-auto"
           loading="eager"
-          aria-hidden="true"
         />
         <div className="mt-2 text-xs text-gray-600 dark:text-gray-400 space-y-1 text-right">
           <p>{artwork.artist}</p>
