@@ -18,8 +18,8 @@ export default function Artwork() {
   const artwork = isDark ? darkArtwork : lightArtwork;
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-4">
-      <div className="max-w-lg mx-auto">
+    <div className="w-full px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-center">
+      <div className="max-w-lg mx-auto w-full">
         <img
           src={isDark ? "/artwork_dark.jpg" : "/artwork_light.jpg"}
           alt={`${artwork.title} by ${artwork.artist}, ${artwork.date}`}
