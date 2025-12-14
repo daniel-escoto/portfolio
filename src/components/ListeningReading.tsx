@@ -128,7 +128,7 @@ export default function ListeningReading() {
             {listeningData.map((item, index) => (
               <div
                 key={index}
-                className="group cursor-pointer transition-transform hover:scale-105"
+                className="group transition-transform hover:scale-105"
               >
                 <div className="aspect-square mb-2 rounded overflow-hidden bg-gray-100 dark:bg-gray-900">
                   <img
@@ -151,7 +151,7 @@ export default function ListeningReading() {
             {readingData.map((item, index) => (
               <div
                 key={index}
-                className="group cursor-pointer transition-transform hover:scale-105"
+                className="group transition-transform hover:scale-105"
               >
                 <div className="aspect-[2/3] mb-2 rounded overflow-hidden bg-gray-100 dark:bg-gray-900">
                   <img
