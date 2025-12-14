@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 sm:pt-32 pb-12 sm:pb-16">
       <div className="text-left space-y-3 max-w-2xl w-full">
         <h1 className="text-4xl sm:text-5xl font-normal tracking-tight text-gray-900 dark:text-white">
           Daniel Escoto
