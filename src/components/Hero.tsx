@@ -9,15 +9,15 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-5xl font-normal tracking-tight text-gray-900 dark:text-white">
             Daniel Escoto
           </h1>
-          <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400">
-            A person of many interests.
+          <p className="text-sm sm:text-base text-gray-500 dark:text-gray-300">
+            Currently trying to learn spanish.
           </p>
         </div>
         <a
           href="https://www.linkedin.com/in/danescoto/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+          className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
           aria-label="LinkedIn"
         >
           <svg

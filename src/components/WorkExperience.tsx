@@ -11,16 +11,14 @@ const workExperience: WorkExperienceItem[] = [
     company: "Garage (YC W24)",
     role: "Founding Engineer",
     dates: "Feb 2025 - Present",
-    description:
-      "Building scalable solutions to modernize how local governments buy and sell essential equipment.",
+    description: "Currently building the modern emergency vehicle marketplace.",
     link: "https://www.shopgarage.com",
   },
   {
     company: "Frontdoor, Inc.",
     role: "Software Engineer",
     dates: "Jan 2023 - Feb 2025",
-    description:
-      "Developed cross-platform solutions using React Native, TypeScript, and XState. Built a reusable theme library that reduced frontend development time by 30%.",
+    description: "Microservices, Angular, and more React Native!",
     link: "https://www.frontdoorhome.com",
   },
   {
@@ -28,15 +26,7 @@ const workExperience: WorkExperienceItem[] = [
     role: "Founding Software Engineer",
     dates: "Dec 2021 - Oct 2022",
     description:
-      "Built and scaled a mobile and web platform serving 300+ users. Migrated app from Ionic React to React Native, improving performance and stability.",
-  },
-  {
-    company: "Tata Consultancy Services",
-    role: "Software Engineer",
-    dates: "Aug 2021 - Jan 2022",
-    description:
-      "Designed and developed cloud-based solutions for enterprise clients using React and AWS services, ensuring 99% uptime.",
-    link: "https://www.tcs.com",
+      "Where I got my feet wet working early stage. Swift -> React -> React Native",
   },
 ];
 
@@ -69,15 +59,15 @@ export default function WorkExperience() {
                       item.company
                     )}
                   </h3>
-                  <span className="text-sm text-gray-500 dark:text-gray-500">
+                  <span className="text-sm text-gray-500 dark:text-gray-300">
                     {item.role}
                   </span>
                 </div>
-                <span className="text-sm text-gray-500 dark:text-gray-500 whitespace-nowrap">
+                <span className="text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
                   {item.dates}
                 </span>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                 {item.description}
               </p>
             </div>

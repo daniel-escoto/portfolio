@@ -108,7 +108,7 @@ export default function ListeningReading() {
             className={`pb-3 text-sm sm:text-base font-medium transition-colors ${
               activeTab === "listening"
                 ? "text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-white"
-                : "text-gray-500 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+                : "text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-200"
             }`}
           >
             Listening
@@ -118,7 +118,7 @@ export default function ListeningReading() {
             className={`pb-3 text-sm sm:text-base font-medium transition-colors ${
               activeTab === "reading"
                 ? "text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-white"
-                : "text-gray-500 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+                : "text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-200"
             }`}
           >
             Reading
@@ -143,7 +143,7 @@ export default function ListeningReading() {
                 <h3 className="text-sm font-medium text-gray-900 dark:text-white truncate">
                   {item.title}
                 </h3>
-                <p className="text-xs text-gray-500 dark:text-gray-500 truncate">
+                <p className="text-xs text-gray-500 dark:text-gray-300 truncate">
                   {item.artist}
                 </p>
               </div>
@@ -166,7 +166,7 @@ export default function ListeningReading() {
                 <h3 className="text-sm font-medium text-gray-900 dark:text-white truncate">
                   {item.title}
                 </h3>
-                <p className="text-xs text-gray-500 dark:text-gray-500 truncate">
+                <p className="text-xs text-gray-500 dark:text-gray-300 truncate">
                   {item.author}
                 </p>
               </div>

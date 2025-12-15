@@ -32,7 +32,7 @@ export default function Artwork() {
           className="w-full h-auto"
           loading="eager"
         />
-        <div className="mt-2 text-xs text-gray-600 dark:text-gray-400 space-y-1 text-right">
+        <div className="mt-2 text-xs text-gray-600 dark:text-gray-300 space-y-1 text-right">
           <p>{artwork.artist}</p>
           <p>{artwork.title}</p>
           <p>{artwork.date}</p>
