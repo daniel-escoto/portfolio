@@ -3,13 +3,19 @@ import { useDarkMode } from "../hooks/useDarkMode";
 export default function Artwork() {
   const isDark = useDarkMode();
 
-  const lightArtwork = {
+  interface Artwork {
+    artist: string;
+    title: string;
+    date: string;
+  }
+
+  const lightArtwork: Artwork = {
     artist: "Claude Monet",
     title: "The Magpie (La Pie)",
     date: "1868–1869",
   };
 
-  const darkArtwork = {
+  const darkArtwork: Artwork = {
     artist: "Adolph von Menzel",
     title: "The Dinner at the Ball / Das Ballsouper",
     date: "1878",

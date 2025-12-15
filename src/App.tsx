@@ -6,7 +6,7 @@ import ListeningReading from "./components/ListeningReading";
 export default function App() {
   return (
     <div className="min-h-screen">
-      <div className="h-screen flex flex-col">
+      <div className="h-[95vh] flex flex-col">
         <Artwork />
         <Hero />
       </div>
