@@ -14,6 +14,12 @@ interface BookItem {
 
 const listeningData: MusicItem[] = [
   {
+    title: "Turn On The Bright Lights",
+    artist: "Interpol",
+    coverImage:
+      "https://m.media-amazon.com/images/I/416xHvqdSCL._UX716_FMwebp_QL85_.jpg",
+  },
+  {
     title: "Skin",
     artist: "Aleksandir",
     coverImage:
