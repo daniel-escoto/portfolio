@@ -1,4 +1,6 @@
 import { useState } from "react";
+import listeningDataJson from "../data/listening.json";
+import readingDataJson from "../data/reading.json";
 
 interface MusicItem {
   title: string;
@@ -12,85 +14,8 @@ interface BookItem {
   coverImage: string;
 }
 
-const listeningData: MusicItem[] = [
-  {
-    title: "Turn On The Bright Lights",
-    artist: "Interpol",
-    coverImage:
-      "https://m.media-amazon.com/images/I/416xHvqdSCL._UX716_FMwebp_QL85_.jpg",
-  },
-  {
-    title: "Skin",
-    artist: "Aleksandir",
-    coverImage:
-      "https://m.media-amazon.com/images/I/61Lzj5UiMWL._UX716_FMwebp_QL85_.jpg",
-  },
-  {
-    title: "Smoke Sessions, Vol.2",
-    artist: "Lord Apex",
-    coverImage:
-      "https://m.media-amazon.com/images/I/3157Mdx4MVL._UX716_FMwebp_QL85_.jpg",
-  },
-  {
-    title: "You Will Never Know Why",
-    artist: "Sweet Trip",
-    coverImage:
-      "https://m.media-amazon.com/images/I/41QxxugqVPL._UX716_FMwebp_QL85_.jpg",
-  },
-  {
-    title: "Peripheral Vision",
-    artist: "Turnover",
-    coverImage:
-      "https://m.media-amazon.com/images/I/61sVwFM1APS._UX716_FMwebp_QL85_.jpg",
-  },
-  {
-    title: "The Life Of Pi'erre 4",
-    artist: "Pi'erre Bourne",
-    coverImage:
-      "https://m.media-amazon.com/images/I/21LfBzMonsL._UX716_FMwebp_QL85_.jpg",
-  },
-  {
-    title: "The Life Of Pablo",
-    artist: "Kanye West",
-    coverImage:
-      "https://m.media-amazon.com/images/I/61Qgl45ZaeL._UX716_FMwebp_QL85_.jpg",
-  },
-];
-
-const readingData: BookItem[] = [
-  {
-    title: "Fluent Forever",
-    author: "Gabriel Wyner",
-    coverImage: "https://m.media-amazon.com/images/I/611gisKfUpL._SY522_.jpg",
-  },
-  {
-    title: "Grant",
-    author: "Ron Chernow",
-    coverImage:
-      "https://m.media-amazon.com/images/I/41SGRZQeumL._SY445_SX342_QL70_FMwebp_.jpg",
-  },
-  {
-    title: "The Road",
-    author: "Cormac McCarthy",
-    coverImage: "https://m.media-amazon.com/images/I/71oj0fEXMTL._SY522_.jpg",
-  },
-  {
-    title: "The Things They Carried",
-    author: "Tim O'Brien",
-    coverImage: "https://m.media-amazon.com/images/I/7185Yxp5cOL._SY522_.jpg",
-  },
-  {
-    title: "The Baseball 100",
-    author: "Joe Posnanski",
-    coverImage: "https://m.media-amazon.com/images/I/51wAj2lO3fL._SY522_.jpg",
-  },
-  {
-    title: "The Stranger",
-    author: "Albert Camus",
-    coverImage:
-      "https://m.media-amazon.com/images/I/41elPDenHHL._SY445_SX342_QL70_FMwebp_.jpg",
-  },
-];
+const listeningData = listeningDataJson as MusicItem[];
+const readingData = readingDataJson as BookItem[];
 
 export default function ListeningReading() {
   const [activeTab, setActiveTab] = useState<"listening" | "reading">(
