@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
 @layer base {
   body {
     @apply bg-lime-50 dark:bg-emerald-950 text-gray-900 dark:text-gray-100;
