@@ -10,7 +10,7 @@ export default function Hero() {
             Daniel Escoto
           </h1>
           <p className="text-sm sm:text-base text-gray-500 dark:text-gray-300">
-            Currently trying to learn spanish.
+            Currently automating my fantasy baseball team.
           </p>
         </div>
         <a
