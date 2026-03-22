@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-lime-50 dark:bg-olive-700 text-gray-900 dark:text-gray-100;
+    @apply bg-olive-300 dark:bg-olive-700 text-gray-900 dark:text-gray-100;
     @apply min-h-screen antialiased;
     @apply transition-colors duration-200;
   }
