@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply bg-orange-50 dark:bg-yellow-950 text-gray-900 dark:text-gray-100;
+    @apply bg-lime-50 dark:bg-emerald-950 text-gray-900 dark:text-gray-100;
     @apply min-h-screen antialiased;
     @apply transition-colors duration-200;
   }
