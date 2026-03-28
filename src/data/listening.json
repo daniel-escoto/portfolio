@@ -1,37 +1,52 @@
 [
   {
-    "title": "Turn On The Bright Lights",
-    "artist": "Interpol",
-    "coverImage": "https://m.media-amazon.com/images/I/416xHvqdSCL._UX716_FMwebp_QL85_.jpg"
+    "title": "Being So Normal",
+    "artist": "Peach Pit",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b27300b39b4a73d28536690b355c"
   },
   {
-    "title": "Skin",
-    "artist": "Aleksandir",
-    "coverImage": "https://m.media-amazon.com/images/I/61Lzj5UiMWL._UX716_FMwebp_QL85_.jpg"
+    "title": "It's Us Vol. 2",
+    "artist": "Concrete Boys, Lil Yachty, Draft Day, Dc2trill",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273b4ea834794d849f79785ff0f"
   },
   {
-    "title": "Smoke Sessions, Vol.2",
-    "artist": "Lord Apex",
-    "coverImage": "https://m.media-amazon.com/images/I/3157Mdx4MVL._UX716_FMwebp_QL85_.jpg"
+    "title": "Love Is A State",
+    "artist": "Bladee",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273c68b61db6c5e04fa03e815e6"
   },
   {
-    "title": "You Will Never Know Why",
-    "artist": "Sweet Trip",
-    "coverImage": "https://m.media-amazon.com/images/I/41QxxugqVPL._UX716_FMwebp_QL85_.jpg"
+    "title": "Aquemini",
+    "artist": "Outkast",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273e2352cc20602d45e9a0e7617"
   },
   {
-    "title": "Peripheral Vision",
-    "artist": "Turnover",
-    "coverImage": "https://m.media-amazon.com/images/I/61sVwFM1APS._UX716_FMwebp_QL85_.jpg"
+    "title": "Like Father Like Son",
+    "artist": "Birdman, Lil Wayne",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2738da932399ce7f587525587b6"
   },
   {
-    "title": "The Life Of Pi'erre 4",
-    "artist": "Pi'erre Bourne",
-    "coverImage": "https://m.media-amazon.com/images/I/21LfBzMonsL._UX716_FMwebp_QL85_.jpg"
+    "title": "Fast Money",
+    "artist": "Birdman",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ade7fe3fa00112ca2896a28"
   },
   {
-    "title": "The Life Of Pablo",
-    "artist": "Kanye West",
-    "coverImage": "https://m.media-amazon.com/images/I/61Qgl45ZaeL._UX716_FMwebp_QL85_.jpg"
+    "title": "Project Baby",
+    "artist": "Kodak Black",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273a7c383159cbda0fc3d09fa14"
+  },
+  {
+    "title": "Small Forward",
+    "artist": "Small Forward",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273972acefb0ae1cee4fb984d24"
+  },
+  {
+    "title": "Strobe",
+    "artist": "deadmau5",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273ac4c76801e5286f371b5f4b1"
+  },
+  {
+    "title": "Crocodile Teeth",
+    "artist": "Skillibeng",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2732350cb2d83f603976da5a2b2"
   }
 ]
