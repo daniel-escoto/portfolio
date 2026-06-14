@@ -1,52 +1,82 @@
 [
   {
+    "id": "1BKKCq9GMdMahEHhPkde5p",
+    "title": "Pet Grief",
+    "artist": "The Radio Dept.",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b27319bf3790caeb480f2c1a4ed1",
+    "playCount": 8,
+    "topTrackRank": 1
+  },
+  {
+    "id": "5q2iMctlDvEMYVIawF6Vop",
+    "title": "Actual Life 3 (January 1 - September 9 2022)",
+    "artist": "Fred again..",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2737f8859341a395010424f106b",
+    "playCount": 7,
+    "topTrackRank": 5
+  },
+  {
+    "id": "7xyJxTNM5WgVaLHebx94tW",
+    "title": "ever",
+    "artist": "Wyatt Smith",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2736042e6661d937421e6e13be7",
+    "playCount": 3,
+    "topTrackRank": 12
+  },
+  {
+    "id": "12Biup1Sq5hpHsX85gJPb2",
+    "title": "Slide",
+    "artist": "George Clanton",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b27354823b660c0985479ea17f08",
+    "playCount": 3,
+    "topTrackRank": 16
+  },
+  {
+    "id": "52j0T0dYsLeLQB6xzPKYWr",
+    "title": "One",
+    "artist": "Riverside",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273b7306989fc2d5019ad693c29",
+    "playCount": 2,
+    "topTrackRank": 17
+  },
+  {
+    "id": "6xduu32sm4aidoLhaxYkUA",
     "title": "Being So Normal",
     "artist": "Peach Pit",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b27300b39b4a73d28536690b355c"
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b27300b39b4a73d28536690b355c",
+    "playCount": 2,
+    "topTrackRank": 21
   },
   {
-    "title": "It's Us Vol. 2",
-    "artist": "Concrete Boys, Lil Yachty, Draft Day, Dc2trill",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273b4ea834794d849f79785ff0f"
+    "id": "08okRl4uCEu3z2h9beW53s",
+    "title": "When we get by",
+    "artist": "Natek",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2731357ef08a88bfbc4888684ea",
+    "playCount": 1,
+    "topTrackRank": 3
   },
   {
-    "title": "Love Is A State",
-    "artist": "Bladee",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273c68b61db6c5e04fa03e815e6"
+    "id": "76Rz3IYqdw3QXTagF14gB6",
+    "title": "The Fashion Focus",
+    "artist": "Starflyer 59",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273bf759419d94c10159216e2b8",
+    "playCount": 1,
+    "topTrackRank": 4
   },
   {
-    "title": "Aquemini",
-    "artist": "Outkast",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273e2352cc20602d45e9a0e7617"
+    "id": "5Y0p2XCgRRIjna91aQE8q7",
+    "title": "The Queen Is Dead",
+    "artist": "The Smiths",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2736236778a208a15eb71079601",
+    "playCount": 1,
+    "topTrackRank": 6
   },
   {
-    "title": "Like Father Like Son",
-    "artist": "Birdman, Lil Wayne",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b2738da932399ce7f587525587b6"
-  },
-  {
-    "title": "Fast Money",
-    "artist": "Birdman",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b2734ade7fe3fa00112ca2896a28"
-  },
-  {
-    "title": "Project Baby",
-    "artist": "Kodak Black",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273a7c383159cbda0fc3d09fa14"
-  },
-  {
-    "title": "Small Forward",
-    "artist": "Small Forward",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273972acefb0ae1cee4fb984d24"
-  },
-  {
-    "title": "Strobe",
-    "artist": "deadmau5",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273ac4c76801e5286f371b5f4b1"
-  },
-  {
-    "title": "Crocodile Teeth",
-    "artist": "Skillibeng",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b2732350cb2d83f603976da5a2b2"
+    "id": "45OVrsju0KIGOcPTRktoBh",
+    "title": "2023 (Majid Jordan Remixes)",
+    "artist": "Lila Drew, Majid Jordan",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2730d83cc87fb20a7d9481a927b",
+    "playCount": 1,
+    "topTrackRank": 8
   }
 ]
