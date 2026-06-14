@@ -13,7 +13,7 @@ export default function Artwork() {
           <img
             src={artwork.image}
             alt={`${artwork.title} by ${artwork.artist}, ${artwork.date}`}
-            className="h-auto max-h-[55vh] object-contain"
+            className="h-auto max-h-[48svh] object-contain sm:max-h-[55vh]"
             loading="eager"
           />
           <div className="mt-2 text-xs text-gray-600 dark:text-gray-300 space-y-1 text-right">

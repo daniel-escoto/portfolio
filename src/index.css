@@ -5,8 +5,13 @@
 }
 
 @layer base {
+  html,
+  #root {
+    @apply min-h-screen bg-amber-50 dark:bg-sky-950;
+  }
+
   body {
-    @apply bg-olive-300 dark:bg-olive-700 text-gray-900 dark:text-gray-100;
+    @apply bg-amber-50 dark:bg-sky-950 text-gray-900 dark:text-gray-100;
     @apply min-h-screen antialiased;
     @apply transition-colors duration-200;
   }

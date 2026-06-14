@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="flex items-center justify-center px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 flex-shrink-0"
+      className="flex flex-shrink-0 items-center justify-center px-4 pb-28 sm:px-6 sm:pb-12 lg:px-8"
     >
       <div className="flex items-center justify-between max-w-2xl w-full">
         <div className="text-left space-y-3">
