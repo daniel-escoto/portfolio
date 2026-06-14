@@ -14,7 +14,7 @@ export default function App() {
     <div
       className={`min-h-screen transition-colors duration-200 ${activeSeasonConfig.colors.bodyLight} ${activeSeasonConfig.colors.bodyDark}`}
     >
-      <div className="flex min-h-[100svh] flex-col sm:min-h-[95vh]">
+      <div className="flex min-h-[calc(100svh-7rem)] flex-col sm:min-h-[95vh]">
         <Artwork />
         <Hero />
       </div>
