@@ -1,3 +1,5 @@
+import { activeSeasonConfig } from "../data/seasons";
+
 interface WorkExperienceItem {
   company: string;
   role: string;
@@ -51,7 +53,7 @@ export default function WorkExperience() {
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors"
+                        className={`transition-colors ${activeSeasonConfig.colors.accentLight} ${activeSeasonConfig.colors.accentDark}`}
                       >
                         {item.company}
                       </a>

@@ -57,6 +57,27 @@ export const seasons: Record<string, SeasonConfig> = {
       accentDark: "dark:hover:text-emerald-500",
     },
   },
+  summer: {
+    lightArtwork: {
+      artist: "Claude Monet",
+      title: "Summer. Poppy Field",
+      date: "1875",
+      image: "/artwork_light_summer.jpg",
+    },
+    darkArtwork: {
+      artist: "Winslow Homer",
+      title: "Summer Night",
+      date: "1890",
+      image: "/artwork_dark_summer.jpg",
+    },
+    colors: {
+      bodyLight: "bg-amber-50",
+      bodyDark: "dark:bg-sky-950",
+      accentLight: "hover:text-rose-600",
+      accentDark: "dark:hover:text-sky-300",
+    },
+  },
 };
 
-export const activeSeason = "spring";
+export const activeSeason = "summer";
+export const activeSeasonConfig = seasons[activeSeason];

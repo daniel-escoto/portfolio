@@ -1,3 +1,5 @@
+import { activeSeasonConfig } from "../data/seasons";
+
 export default function Hero() {
   return (
     <div
@@ -17,7 +19,7 @@ export default function Hero() {
           href="https://www.linkedin.com/in/danescoto/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+          className={`text-gray-600 dark:text-gray-300 transition-colors ${activeSeasonConfig.colors.accentLight} ${activeSeasonConfig.colors.accentDark}`}
           aria-label="LinkedIn"
         >
           <svg
