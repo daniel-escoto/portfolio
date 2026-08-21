@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen transition-colors duration-700 hour-page">
-      <div className="flex min-h-[calc(100svh-7rem)] flex-col sm:min-h-[95vh]">
+      <div className="flex min-h-[calc(100svh-4rem)] flex-col sm:min-h-[95vh]">
         <Artwork hour={hour} />
         <Hero />
       </div>
