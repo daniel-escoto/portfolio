@@ -1,5 +1,3 @@
-import { activeSeasonConfig } from "../data/seasons";
-
 interface WorkExperienceItem {
   company: string;
   role: string;
@@ -39,7 +37,10 @@ export default function WorkExperience() {
       className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16"
     >
       <div className="max-w-2xl w-full">
-        <h2 className="text-2xl sm:text-3xl font-normal tracking-tight text-gray-900 dark:text-white mb-8">
+        <h2
+          className="text-2xl sm:text-3xl font-normal tracking-tight mb-8 transition-colors duration-700"
+          style={{ color: "var(--hour-text)" }}
+        >
           Experience
         </h2>
         <div className="space-y-8">
@@ -47,13 +48,16 @@ export default function WorkExperience() {
             <div key={index} className="space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-4">
                 <div className="flex items-baseline gap-2 flex-wrap">
-                  <h3 className="text-base sm:text-lg font-medium text-gray-900 dark:text-white">
+                  <h3
+                    className="text-base sm:text-lg font-medium transition-colors duration-700"
+                    style={{ color: "var(--hour-text)" }}
+                  >
                     {item.link ? (
                       <a
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`transition-colors ${activeSeasonConfig.colors.accentLight} ${activeSeasonConfig.colors.accentDark}`}
+                        className="transition-colors duration-700 hour-accent-hover"
                       >
                         {item.company}
                       </a>
@@ -61,15 +65,24 @@ export default function WorkExperience() {
                       item.company
                     )}
                   </h3>
-                  <span className="text-sm text-gray-500 dark:text-gray-300">
+                  <span
+                    className="text-sm transition-colors duration-700"
+                    style={{ color: "var(--hour-muted)" }}
+                  >
                     {item.role}
                   </span>
                 </div>
-                <span className="text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+                <span
+                  className="text-sm whitespace-nowrap transition-colors duration-700"
+                  style={{ color: "var(--hour-muted)" }}
+                >
                   {item.dates}
                 </span>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p
+                className="text-sm leading-relaxed transition-colors duration-700"
+                style={{ color: "var(--hour-muted)" }}
+              >
                 {item.description}
               </p>
             </div>

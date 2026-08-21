@@ -1,5 +1,3 @@
-import { activeSeasonConfig } from "../data/seasons";
-
 export default function Hero() {
   return (
     <div
@@ -8,10 +6,16 @@ export default function Hero() {
     >
       <div className="flex items-center justify-between max-w-2xl w-full">
         <div className="text-left space-y-3">
-          <h1 className="text-4xl sm:text-5xl font-normal tracking-tight text-gray-900 dark:text-white">
+          <h1
+            className="text-4xl sm:text-5xl font-normal tracking-tight transition-colors duration-700"
+            style={{ color: "var(--hour-text)" }}
+          >
             Daniel Escoto
           </h1>
-          <p className="text-sm sm:text-base text-gray-500 dark:text-gray-300">
+          <p
+            className="text-sm sm:text-base transition-colors duration-700"
+            style={{ color: "var(--hour-muted)" }}
+          >
             Currently automating my fantasy baseball team.
           </p>
         </div>
@@ -19,7 +23,8 @@ export default function Hero() {
           href="https://www.linkedin.com/in/danescoto/"
           target="_blank"
           rel="noopener noreferrer"
-          className={`text-gray-600 dark:text-gray-300 transition-colors ${activeSeasonConfig.colors.accentLight} ${activeSeasonConfig.colors.accentDark}`}
+          className="transition-colors duration-700 hour-accent-hover"
+          style={{ color: "var(--hour-muted)" }}
           aria-label="LinkedIn"
         >
           <svg
