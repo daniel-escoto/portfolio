@@ -17,9 +17,6 @@ interface BookItem {
 const listeningData = listeningDataJson as MusicItem[];
 const readingData = readingDataJson as BookItem[];
 
-/** Temporary: hide Reading tab/content. Flip to true to restore. */
-const SHOW_READING = false;
-
 export default function ListeningReading() {
   const [activeTab, setActiveTab] = useState<"listening" | "reading">(
     "listening"
@@ -37,86 +34,45 @@ export default function ListeningReading() {
         >
           My Library
         </h2>
-        {SHOW_READING ? (
-          <div
-            className="flex space-x-6 mb-8 border-b transition-colors duration-700"
-            style={{ borderColor: "var(--hour-border)" }}
-          >
-            <button
-              onClick={() => setActiveTab("listening")}
-              className="pb-3 text-sm sm:text-base font-medium transition-colors duration-700"
-              style={{
-                color:
-                  activeTab === "listening"
-                    ? "var(--hour-text)"
-                    : "var(--hour-muted)",
-                borderBottom:
-                  activeTab === "listening"
-                    ? "2px solid var(--hour-text)"
-                    : "2px solid transparent",
-              }}
-            >
-              Listening
-            </button>
-            <button
-              onClick={() => setActiveTab("reading")}
-              className="pb-3 text-sm sm:text-base font-medium transition-colors duration-700"
-              style={{
-                color:
-                  activeTab === "reading"
-                    ? "var(--hour-text)"
-                    : "var(--hour-muted)",
-                borderBottom:
-                  activeTab === "reading"
-                    ? "2px solid var(--hour-text)"
-                    : "2px solid transparent",
-              }}
-            >
-              Reading
-            </button>
-          </div>
-        ) : (
-          <p
-            className="mb-8 text-sm sm:text-base font-medium transition-colors duration-700"
-            style={{ color: "var(--hour-text)" }}
+        <div
+          className="flex space-x-6 mb-8 border-b transition-colors duration-700"
+          style={{ borderColor: "var(--hour-border)" }}
+        >
+          <button
+            onClick={() => setActiveTab("listening")}
+            className="pb-3 text-sm sm:text-base font-medium transition-colors duration-700"
+            style={{
+              color:
+                activeTab === "listening"
+                  ? "var(--hour-text)"
+                  : "var(--hour-muted)",
+              borderBottom:
+                activeTab === "listening"
+                  ? "2px solid var(--hour-text)"
+                  : "2px solid transparent",
+            }}
           >
             Listening
-          </p>
-        )}
+          </button>
+          <button
+            onClick={() => setActiveTab("reading")}
+            className="pb-3 text-sm sm:text-base font-medium transition-colors duration-700"
+            style={{
+              color:
+                activeTab === "reading"
+                  ? "var(--hour-text)"
+                  : "var(--hour-muted)",
+              borderBottom:
+                activeTab === "reading"
+                  ? "2px solid var(--hour-text)"
+                  : "2px solid transparent",
+            }}
+          >
+            Reading
+          </button>
+        </div>
 
-        {SHOW_READING && activeTab === "reading" ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
-            {readingData.map((item, index) => (
-              <div
-                key={index}
-                className="group transition-transform hover:scale-105"
-              >
-                <div
-                  className="aspect-2/3 mb-2 rounded overflow-hidden transition-colors duration-700"
-                  style={{ backgroundColor: "var(--hour-surface)" }}
-                >
-                  <img
-                    src={item.coverImage}
-                    alt={`${item.title} by ${item.author}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3
-                  className="text-sm font-medium truncate transition-colors duration-700"
-                  style={{ color: "var(--hour-text)" }}
-                >
-                  {item.title}
-                </h3>
-                <p
-                  className="text-xs truncate transition-colors duration-700"
-                  style={{ color: "var(--hour-muted)" }}
-                >
-                  {item.author}
-                </p>
-              </div>
-            ))}
-          </div>
-        ) : (
+        {activeTab === "listening" ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
             {listeningData.map((item, index) => (
               <div
@@ -144,6 +100,38 @@ export default function ListeningReading() {
                   style={{ color: "var(--hour-muted)" }}
                 >
                   {item.artist}
+                </p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+            {readingData.map((item, index) => (
+              <div
+                key={index}
+                className="group transition-transform hover:scale-105"
+              >
+                <div
+                  className="aspect-2/3 mb-2 rounded overflow-hidden transition-colors duration-700"
+                  style={{ backgroundColor: "var(--hour-surface)" }}
+                >
+                  <img
+                    src={item.coverImage}
+                    alt={`${item.title} by ${item.author}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3
+                  className="text-sm font-medium truncate transition-colors duration-700"
+                  style={{ color: "var(--hour-text)" }}
+                >
+                  {item.title}
+                </h3>
+                <p
+                  className="text-xs truncate transition-colors duration-700"
+                  style={{ color: "var(--hour-muted)" }}
+                >
+                  {item.author}
                 </p>
               </div>
             ))}

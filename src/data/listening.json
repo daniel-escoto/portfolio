@@ -1,98 +1,82 @@
 [
   {
-    "id": "2yXnY2NiaZk9QiJJittS81",
-    "title": "Drip Harder",
-    "artist": "Lil Baby & Gunna",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273ce159a3ba2096e13fa9d4b4c",
-    "playCount": 6,
-    "topTrackRank": 4
-  },
-  {
-    "id": "0q1YbH7gLkklLFxNBLRKHD",
-    "title": "Alphabetical",
-    "artist": "Phoenix",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b2737ce45a1083d80c29d658537c",
-    "playCount": 4,
-    "topTrackRank": 2
-  },
-  {
-    "id": "4HZ3fF1dwSZLwztlLwoDYA",
-    "title": "9 months & 50 hours",
-    "artist": "LATIN MAFIA, Fred again..",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b27368b885ac6477b8fe52d9532c",
-    "playCount": 2,
-    "topTrackRank": 1
-  },
-  {
-    "id": "0gA0nZrZ55PLUp7ARfrICu",
-    "title": "WUNNA",
-    "artist": "Gunna",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273624e7087da8b43a231d8adcf",
-    "playCount": 2,
-    "topTrackRank": 20
-  },
-  {
-    "id": "0jTGHV5xqHPvEcwL8f6YU5",
-    "title": "Let It Be (Remastered)",
-    "artist": "The Beatles",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b27384243a01af3c77b56fe01ab1",
-    "playCount": 1,
-    "topTrackRank": 6
-  },
-  {
-    "id": "53wStBoNAK1lhbfbuCJ2zd",
-    "title": "ANTH01",
-    "artist": "Jacques Greene",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b27367f2ae5b909c25a94891d1a7",
-    "playCount": 1,
-    "topTrackRank": 8
-  },
-  {
-    "id": "7sZOAE8enZvif1qQgpV0SD",
-    "title": "No Sleep",
-    "artist": "TWOFACED, 6 SENSE",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273476a82ae44b821f194286b08",
-    "playCount": 1,
-    "topTrackRank": 9
-  },
-  {
     "id": "1BKKCq9GMdMahEHhPkde5p",
     "title": "Pet Grief",
     "artist": "The Radio Dept.",
     "coverImage": "https://i.scdn.co/image/ab67616d0000b27319bf3790caeb480f2c1a4ed1",
-    "playCount": 1,
-    "topTrackRank": 11
+    "playCount": 8,
+    "topTrackRank": 1
   },
   {
-    "id": "5s6aGKI2wpPxegrhLXmGIG",
-    "title": "MK 3.5: Die Cuts | City Planning",
-    "artist": "Mount Kimbie",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b2735011c7d3736ff91b78a9b947",
-    "playCount": 1,
+    "id": "5q2iMctlDvEMYVIawF6Vop",
+    "title": "Actual Life 3 (January 1 - September 9 2022)",
+    "artist": "Fred again..",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2737f8859341a395010424f106b",
+    "playCount": 7,
+    "topTrackRank": 5
+  },
+  {
+    "id": "7xyJxTNM5WgVaLHebx94tW",
+    "title": "ever",
+    "artist": "Wyatt Smith",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2736042e6661d937421e6e13be7",
+    "playCount": 3,
+    "topTrackRank": 12
+  },
+  {
+    "id": "12Biup1Sq5hpHsX85gJPb2",
+    "title": "Slide",
+    "artist": "George Clanton",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b27354823b660c0985479ea17f08",
+    "playCount": 3,
     "topTrackRank": 16
   },
   {
-    "id": "20r762YmB5HeofjMCiPMLv",
-    "title": "My Beautiful Dark Twisted Fantasy",
-    "artist": "Kanye West",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273d9194aa18fa4c9362b47464f",
-    "playCount": 1,
+    "id": "52j0T0dYsLeLQB6xzPKYWr",
+    "title": "One",
+    "artist": "Riverside",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273b7306989fc2d5019ad693c29",
+    "playCount": 2,
     "topTrackRank": 17
   },
   {
-    "id": "2lIZef4lzdvZkiiCzvPKj7",
-    "title": "BRAT",
-    "artist": "Charli xcx",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273f88b43d15fd14e9525338b59",
-    "playCount": 1,
-    "topTrackRank": 22
+    "id": "6xduu32sm4aidoLhaxYkUA",
+    "title": "Being So Normal",
+    "artist": "Peach Pit",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b27300b39b4a73d28536690b355c",
+    "playCount": 2,
+    "topTrackRank": 21
   },
   {
-    "id": "0ETFjACtuP2ADo6LFhL6HN",
-    "title": "Abbey Road (Remastered)",
-    "artist": "The Beatles",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273dc30583ba717007b00cceb25",
+    "id": "08okRl4uCEu3z2h9beW53s",
+    "title": "When we get by",
+    "artist": "Natek",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2731357ef08a88bfbc4888684ea",
     "playCount": 1,
-    "topTrackRank": 23
+    "topTrackRank": 3
+  },
+  {
+    "id": "76Rz3IYqdw3QXTagF14gB6",
+    "title": "The Fashion Focus",
+    "artist": "Starflyer 59",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273bf759419d94c10159216e2b8",
+    "playCount": 1,
+    "topTrackRank": 4
+  },
+  {
+    "id": "5Y0p2XCgRRIjna91aQE8q7",
+    "title": "The Queen Is Dead",
+    "artist": "The Smiths",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2736236778a208a15eb71079601",
+    "playCount": 1,
+    "topTrackRank": 6
+  },
+  {
+    "id": "45OVrsju0KIGOcPTRktoBh",
+    "title": "2023 (Majid Jordan Remixes)",
+    "artist": "Lila Drew, Majid Jordan",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2730d83cc87fb20a7d9481a927b",
+    "playCount": 1,
+    "topTrackRank": 8
   }
 ]
