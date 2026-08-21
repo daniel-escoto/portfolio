@@ -9,16 +9,16 @@ export default function Artwork({ hour }: ArtworkProps) {
 
   return (
     <div className="flex min-h-0 w-full flex-1 flex-col px-4 pt-6 sm:px-6 sm:pt-8 lg:px-8">
-      <div className="mx-auto w-full max-w-2xl shrink-0">
+      <div className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col">
         <img
           key={artwork.image}
           src={artwork.image}
           alt={`${artwork.title} by ${artwork.artist}, ${artwork.date}`}
-          className="block h-auto w-full max-h-[calc(100dvh-14rem)] object-contain object-left animate-hour-fade"
+          className="min-h-0 w-full flex-1 object-contain object-left animate-hour-fade"
           loading="eager"
         />
         <div
-          className="mt-3 space-y-0.5 text-left text-xs transition-colors duration-700"
+          className="mt-3 shrink-0 space-y-0.5 text-left text-xs transition-colors duration-700"
           style={{ color: "var(--hour-muted)" }}
         >
           <p>{artwork.artist}</p>
@@ -32,7 +32,6 @@ export default function Artwork({ hour }: ArtworkProps) {
           </p>
         </div>
       </div>
-      <div className="min-h-0 flex-1" aria-hidden="true" />
     </div>
   );
 }
