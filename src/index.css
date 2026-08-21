@@ -5,14 +5,50 @@
 }
 
 @layer base {
+  :root {
+    --hour-bg: #f6ebe0;
+    --hour-surface: #ead9c6;
+    --hour-text: #1c1c1e;
+    --hour-muted: #5f5f64;
+    --hour-accent: #c45a28;
+    --hour-border: #d4c4b0;
+  }
+
   html,
   #root {
-    @apply min-h-screen bg-amber-50 dark:bg-sky-950;
+    @apply min-h-screen;
+    background-color: var(--hour-bg);
+    transition: background-color 700ms ease;
   }
 
   body {
-    @apply bg-amber-50 dark:bg-sky-950 text-gray-900 dark:text-gray-100;
     @apply min-h-screen antialiased;
-    @apply transition-colors duration-200;
+    background-color: var(--hour-bg);
+    color: var(--hour-text);
+    transition: background-color 700ms ease, color 700ms ease;
+  }
+}
+
+@layer utilities {
+  .hour-page {
+    background-color: var(--hour-bg);
+    color: var(--hour-text);
+  }
+
+  .hour-accent-hover:hover {
+    color: var(--hour-accent);
+  }
+
+  @keyframes hour-fade {
+    from {
+      opacity: 0.35;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-hour-fade {
+    animation: hour-fade 700ms ease;
   }
 }

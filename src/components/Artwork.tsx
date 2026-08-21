@@ -1,26 +1,35 @@
-import { useDarkMode } from "../hooks/useDarkMode";
-import { seasons, activeSeason } from "../data/seasons";
+import { getHourArtwork } from "../data/hours";
 
-export default function Artwork() {
-  const isDark = useDarkMode();
-  const season = seasons[activeSeason];
-  const artwork = isDark ? season.darkArtwork : season.lightArtwork;
+interface ArtworkProps {
+  hour: number;
+}
+
+export default function Artwork({ hour }: ArtworkProps) {
+  const artwork = getHourArtwork(hour);
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-center">
-      <div className="mx-auto flex flex-col items-center">
-        <div className="inline-flex flex-col">
-          <img
-            src={artwork.image}
-            alt={`${artwork.title} by ${artwork.artist}, ${artwork.date}`}
-            className="h-auto max-h-[48svh] object-contain sm:max-h-[55vh]"
-            loading="eager"
-          />
-          <div className="mt-2 text-xs text-gray-600 dark:text-gray-300 space-y-1 text-right">
-            <p>{artwork.artist}</p>
-            <p>{artwork.title}</p>
-            <p>{artwork.date}</p>
-          </div>
+    <div className="w-full px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-end sm:justify-center pt-6 sm:pt-8">
+      <div className="mx-auto w-full max-w-2xl">
+        <img
+          key={artwork.image}
+          src={artwork.image}
+          alt={`${artwork.title} by ${artwork.artist}, ${artwork.date}`}
+          className="block w-full h-auto max-h-[46svh] object-contain object-left sm:max-h-[55vh] animate-hour-fade"
+          loading="eager"
+        />
+        <div
+          className="mt-3 text-xs space-y-0.5 text-left transition-colors duration-700"
+          style={{ color: "var(--hour-muted)" }}
+        >
+          <p>{artwork.artist}</p>
+          <p>{artwork.title}</p>
+          <p>
+            {artwork.date}
+            <span className="mx-1.5 opacity-50" aria-hidden="true">
+              ·
+            </span>
+            {artwork.period}
+          </p>
         </div>
       </div>
     </div>
