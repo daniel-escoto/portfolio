@@ -8,13 +8,13 @@ export default function Artwork({ hour }: ArtworkProps) {
   const artwork = getHourArtwork(hour);
 
   return (
-    <div className="flex min-h-0 w-full flex-1 flex-col px-4 pt-6 sm:px-6 sm:pt-8 lg:px-8">
-      <div className="mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col">
+    <div className="w-full shrink-0 px-4 pt-6 sm:px-6 sm:pt-8 lg:px-8">
+      <div className="mx-auto w-full max-w-2xl">
         <img
           key={artwork.image}
           src={artwork.image}
           alt={`${artwork.title} by ${artwork.artist}, ${artwork.date}`}
-          className="h-0 min-h-0 w-full flex-1 object-cover object-left animate-hour-fade"
+          className="block h-auto w-full animate-hour-fade"
           loading="eager"
         />
         <div
