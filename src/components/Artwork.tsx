@@ -14,7 +14,7 @@ export default function Artwork({ hour }: ArtworkProps) {
           key={artwork.image}
           src={artwork.image}
           alt={`${artwork.title} by ${artwork.artist}, ${artwork.date}`}
-          className="min-h-0 w-full flex-1 object-contain object-left animate-hour-fade"
+          className="h-0 min-h-0 w-full flex-1 object-cover object-left animate-hour-fade"
           loading="eager"
         />
         <div
