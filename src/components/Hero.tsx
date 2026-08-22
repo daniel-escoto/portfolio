@@ -2,12 +2,12 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="flex flex-shrink-0 items-center justify-center px-4 pt-5 pb-10 sm:px-6 sm:pt-6 sm:pb-12 lg:px-8"
+      className="mt-auto flex w-full max-w-2xl shrink-0 items-center justify-center px-4 pb-[max(2rem,env(safe-area-inset-bottom))] pt-4 sm:px-6 sm:pb-[max(2.5rem,env(safe-area-inset-bottom))] sm:pt-5 lg:px-8"
     >
-      <div className="max-w-2xl w-full">
+      <div className="w-full">
         <div className="flex items-center gap-3">
           <h1
-            className="text-4xl sm:text-5xl font-normal tracking-tight transition-colors duration-700"
+            className="text-4xl font-normal tracking-tight transition-colors duration-700 sm:text-5xl"
             style={{ color: "var(--hour-text)" }}
           >
             Daniel Escoto
@@ -16,12 +16,12 @@ export default function Hero() {
             href="https://www.linkedin.com/in/danescoto/"
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 transition-colors duration-700 hour-accent-hover"
+            className="hour-accent-hover shrink-0 transition-colors duration-700"
             style={{ color: "var(--hour-muted)" }}
             aria-label="LinkedIn"
           >
             <svg
-              className="w-6 h-6"
+              className="h-6 w-6"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ export default function Hero() {
           </a>
         </div>
         <p
-          className="mt-3 text-sm sm:text-base transition-colors duration-700"
+          className="mt-3 text-sm transition-colors duration-700 sm:text-base"
           style={{ color: "var(--hour-muted)" }}
         >
           Currently automating my fantasy baseball team.
