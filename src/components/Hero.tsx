@@ -2,9 +2,9 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="mt-auto flex shrink-0 items-center justify-center px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-4 sm:px-6 sm:pb-4 sm:pt-5 lg:px-8"
+      className="mt-auto flex w-full max-w-2xl shrink-0 items-center justify-center px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-4 sm:px-6 sm:pb-4 sm:pt-5 lg:px-8"
     >
-      <div className="w-full max-w-2xl">
+      <div className="w-full">
         <div className="flex items-center gap-3">
           <h1
             className="text-4xl font-normal tracking-tight transition-colors duration-700 sm:text-5xl"
