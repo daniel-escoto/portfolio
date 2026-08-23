@@ -16,9 +16,13 @@ export default function App() {
 
   return (
     <div className="min-h-screen transition-colors duration-700 hour-page">
-      <div className="flex h-svh min-h-0 w-full flex-col items-center overflow-hidden">
-        <Artwork hour={hour} />
-        <Hero />
+      <div className="grid h-dvh min-h-0 w-full grid-rows-[minmax(0,2fr)_minmax(0,1fr)] overflow-hidden">
+        <div className="flex min-h-0 items-center justify-center px-4 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-6 lg:px-8">
+          <Artwork hour={hour} />
+        </div>
+        <div className="flex min-h-0 flex-col items-center justify-end px-4 pb-[max(2.5rem,calc(env(safe-area-inset-bottom,0px)+4.5rem))] sm:px-6 lg:px-8 lg:pb-[max(3.5rem,env(safe-area-inset-bottom))]">
+          <Hero />
+        </div>
       </div>
       <ListeningReading />
       <WorkExperience />
