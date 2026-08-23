@@ -40,7 +40,7 @@ async function injectSafariToolbar(page: Page) {
   }, SAFARI_TOOLBAR_HEIGHT);
 }
 
-async function assertHeroVisibleAboveToolbar(page: Page) {
+async function assertHeroAtViewportBottom(page: Page) {
   const hero = page.locator("#hero");
   const title = hero.locator("h1");
   const subtitle = hero.locator("p").first();
@@ -61,14 +61,21 @@ async function assertHeroVisibleAboveToolbar(page: Page) {
   expect(viewport).not.toBeNull();
 
   const visibleBottom = viewport!.height - SAFARI_TOOLBAR_HEIGHT;
+  const subtitleBottom = subtitleBox!.y + subtitleBox!.height;
+  const gapBelowSubtitle = viewport!.height - subtitleBottom;
+
+  const needsToolbarClearance = viewport!.width < 1024;
 
   expect(titleBox!.y + titleBox!.height).toBeLessThanOrEqual(visibleBottom + 1);
   expect(linkedInBox!.y + linkedInBox!.height).toBeLessThanOrEqual(
     visibleBottom + 1,
   );
-  expect(subtitleBox!.y + subtitleBox!.height).toBeLessThanOrEqual(
-    visibleBottom + 2,
-  );
+  if (needsToolbarClearance) {
+    expect(subtitleBottom).toBeLessThanOrEqual(visibleBottom + 2);
+  }
+  expect(subtitleBottom).toBeGreaterThan((viewport!.height * 2) / 3);
+  expect(gapBelowSubtitle).toBeLessThan(72);
+  expect(gapBelowSubtitle).toBeGreaterThan(24);
 }
 
 async function assertArtworkCenteredInTopTwoThirds(page: Page) {
@@ -94,31 +101,15 @@ async function assertArtworkCenteredInTopTwoThirds(page: Page) {
   const topRegionCenter = topRegionBottom / 2;
   const spaceAbove = blockTop;
   const spaceBelow = topRegionBottom - blockBottom;
-  const isPortraitCompact =
-    viewport!.width < 1024 && viewport!.height >= viewport!.width;
 
   expect(blockBottom).toBeLessThanOrEqual(topRegionBottom + 2);
-  if (isPortraitCompact) {
-    expect(spaceAbove).toBeGreaterThan(viewport!.height * 0.1);
-    expect(spaceBelow).toBeLessThan(viewport!.height * 0.08);
-    expect(blockTop).toBeGreaterThan(viewport!.height * 0.1);
-  } else if (viewport!.width < 1024) {
-    expect(Math.abs(blockCenter - topRegionCenter)).toBeLessThan(
-      viewport!.height * 0.1,
-    );
-    expect(blockBottom).toBeLessThanOrEqual(topRegionBottom + 2);
-  } else {
-    expect(Math.abs(blockCenter - topRegionCenter)).toBeLessThan(
-      viewport!.height * 0.08,
-    );
-    expect(Math.abs(spaceAbove - spaceBelow)).toBeLessThan(
-      viewport!.height * 0.1,
-    );
-  }
-
-  const heroTop = await page.locator("#hero h1").boundingBox();
-  expect(heroTop).not.toBeNull();
-  expect(heroTop!.y - blockBottom).toBeLessThan(viewport!.height * 0.08);
+  expect(blockTop).toBeGreaterThan(16);
+  expect(Math.abs(blockCenter - topRegionCenter)).toBeLessThan(
+    viewport!.height * 0.08,
+  );
+  expect(Math.abs(spaceAbove - spaceBelow)).toBeLessThan(
+    viewport!.height * 0.1,
+  );
 }
 
 test.beforeAll(() => {
@@ -135,7 +126,7 @@ for (const viewport of VIEWPORTS) {
     await page.waitForLoadState("networkidle");
     await injectSafariToolbar(page);
 
-    await assertHeroVisibleAboveToolbar(page);
+    await assertHeroAtViewportBottom(page);
     await assertArtworkCenteredInTopTwoThirds(page);
 
     await page.screenshot({
