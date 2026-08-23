@@ -8,7 +8,7 @@ export default function Artwork({ hour }: ArtworkProps) {
   const artwork = getHourArtwork(hour);
 
   return (
-    <div id="artwork" className="flex w-full max-w-2xl flex-col items-center">
+    <div id="artwork" className="flex w-full max-w-2xl translate-y-[2.5dvh] flex-col items-center lg:translate-y-[1dvh]">
       <img
         key={artwork.image}
         src={artwork.image}

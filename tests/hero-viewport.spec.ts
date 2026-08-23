@@ -74,8 +74,8 @@ async function assertHeroAtViewportBottom(page: Page) {
     expect(subtitleBottom).toBeLessThanOrEqual(visibleBottom + 2);
   }
   expect(subtitleBottom).toBeGreaterThan((viewport!.height * 2) / 3);
-  expect(gapBelowSubtitle).toBeLessThan(72);
-  expect(gapBelowSubtitle).toBeGreaterThan(24);
+  expect(gapBelowSubtitle).toBeLessThan(96);
+  expect(gapBelowSubtitle).toBeGreaterThan(40);
 }
 
 async function assertArtworkCenteredInTopTwoThirds(page: Page) {
@@ -104,12 +104,9 @@ async function assertArtworkCenteredInTopTwoThirds(page: Page) {
 
   expect(blockBottom).toBeLessThanOrEqual(topRegionBottom + 2);
   expect(blockTop).toBeGreaterThan(16);
-  expect(Math.abs(blockCenter - topRegionCenter)).toBeLessThan(
-    viewport!.height * 0.08,
-  );
-  expect(Math.abs(spaceAbove - spaceBelow)).toBeLessThan(
-    viewport!.height * 0.1,
-  );
+  expect(blockCenter).toBeGreaterThanOrEqual(topRegionCenter - viewport!.height * 0.02);
+  expect(blockCenter).toBeLessThanOrEqual(topRegionCenter + viewport!.height * 0.06);
+  expect(spaceAbove).toBeGreaterThanOrEqual(spaceBelow - viewport!.height * 0.04);
 }
 
 test.beforeAll(() => {

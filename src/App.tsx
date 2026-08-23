@@ -20,7 +20,7 @@ export default function App() {
         <div className="flex min-h-0 items-center justify-center px-4 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-6 lg:px-8">
           <Artwork hour={hour} />
         </div>
-        <div className="flex min-h-0 flex-col items-center justify-end px-4 pb-[max(2rem,calc(env(safe-area-inset-bottom,0px)+3.5rem))] sm:px-6 lg:px-8 lg:pb-[max(2.5rem,env(safe-area-inset-bottom))]">
+        <div className="flex min-h-0 flex-col items-center justify-end px-4 pb-[max(2.5rem,calc(env(safe-area-inset-bottom,0px)+4.5rem))] sm:px-6 lg:px-8 lg:pb-[max(3.5rem,env(safe-area-inset-bottom))]">
           <Hero />
         </div>
       </div>
