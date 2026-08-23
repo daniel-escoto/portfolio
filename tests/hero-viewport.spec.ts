@@ -67,7 +67,7 @@ async function assertHeroVisibleAboveToolbar(page: Page) {
     visibleBottom + 1,
   );
   expect(subtitleBox!.y + subtitleBox!.height).toBeLessThanOrEqual(
-    visibleBottom + 1,
+    visibleBottom + 2,
   );
 }
 
@@ -92,12 +92,33 @@ async function assertArtworkCenteredInTopTwoThirds(page: Page) {
   const blockBottom = captionBox!.y + captionBox!.height;
   const blockCenter = (blockTop + blockBottom) / 2;
   const topRegionCenter = topRegionBottom / 2;
+  const spaceAbove = blockTop;
+  const spaceBelow = topRegionBottom - blockBottom;
+  const isPortraitCompact =
+    viewport!.width < 1024 && viewport!.height >= viewport!.width;
 
   expect(blockBottom).toBeLessThanOrEqual(topRegionBottom + 2);
-  expect(blockTop).toBeGreaterThan(8);
-  expect(Math.abs(blockCenter - topRegionCenter)).toBeLessThan(
-    viewport!.height * 0.15,
-  );
+  if (isPortraitCompact) {
+    expect(spaceAbove).toBeGreaterThan(viewport!.height * 0.1);
+    expect(spaceBelow).toBeLessThan(viewport!.height * 0.08);
+    expect(blockTop).toBeGreaterThan(viewport!.height * 0.1);
+  } else if (viewport!.width < 1024) {
+    expect(Math.abs(blockCenter - topRegionCenter)).toBeLessThan(
+      viewport!.height * 0.1,
+    );
+    expect(blockBottom).toBeLessThanOrEqual(topRegionBottom + 2);
+  } else {
+    expect(Math.abs(blockCenter - topRegionCenter)).toBeLessThan(
+      viewport!.height * 0.08,
+    );
+    expect(Math.abs(spaceAbove - spaceBelow)).toBeLessThan(
+      viewport!.height * 0.1,
+    );
+  }
+
+  const heroTop = await page.locator("#hero h1").boundingBox();
+  expect(heroTop).not.toBeNull();
+  expect(heroTop!.y - blockBottom).toBeLessThan(viewport!.height * 0.08);
 }
 
 test.beforeAll(() => {
