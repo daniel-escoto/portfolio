@@ -17,7 +17,7 @@ export default function App() {
   return (
     <div className="min-h-screen transition-colors duration-700 hour-page">
       <div className="grid h-dvh min-h-0 w-full grid-rows-[minmax(0,2fr)_minmax(0,1fr)] items-center overflow-hidden">
-        <div className="flex min-h-0 w-full items-center justify-center px-4 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-6 lg:px-8">
+        <div className="flex h-full min-h-0 w-full items-center justify-center px-4 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-6 lg:px-8">
           <Artwork hour={hour} />
         </div>
         <Hero />

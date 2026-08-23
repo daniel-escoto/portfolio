@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="flex min-h-0 w-full max-w-2xl flex-col justify-end self-center px-4 pb-[max(2rem,calc(env(safe-area-inset-bottom,0px)+3rem))] sm:px-6 sm:pb-[max(2.5rem,env(safe-area-inset-bottom))] lg:px-8"
+      className="flex min-h-0 w-full max-w-2xl flex-col justify-end self-center px-4 pb-[max(2.5rem,env(safe-area-inset-bottom))] [@media(max-height:700px)]:pb-[max(2rem,calc(env(safe-area-inset-bottom,0px)+3.5rem))] sm:px-6 lg:px-8"
     >
       <div className="w-full">
         <div className="flex items-center gap-3">
