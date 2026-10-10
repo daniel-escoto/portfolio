@@ -1,11 +1,35 @@
 [
   {
-    "id": "2yXnY2NiaZk9QiJJittS81",
-    "title": "Drip Harder",
-    "artist": "Lil Baby & Gunna",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273ce159a3ba2096e13fa9d4b4c",
-    "playCount": 6,
-    "topTrackRank": 4
+    "id": "7Jo4N42wOOKa6FolEXCSI3",
+    "title": "EXETER",
+    "artist": "Bladee",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b27363f259ea7e75e1f76b6f1475"
+  },
+  {
+    "id": "6xRxlUUfg3M0QB1LUX89gA",
+    "title": "DATA",
+    "artist": "Tainy",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273de7b9af78fbdda96c5a0635b"
+  },
+  {
+    "id": "0Vc48CANIrBcl0VBDy1TTX",
+    "title": "Two Roads",
+    "artist": "Majid Jordan",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273574a553c7b51bd806bb11ede"
+  },
+  {
+    "id": "4eLPsYPBmXABThSJ821sqY",
+    "title": "DAMN.",
+    "artist": "Kendrick Lamar",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b2738b52c6b9bc4e43d873869699"
+  },
+  {
+    "id": "1BKKCq9GMdMahEHhPkde5p",
+    "title": "Pet Grief",
+    "artist": "The Radio Dept.",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b27319bf3790caeb480f2c1a4ed1",
+    "playCount": 1,
+    "topTrackRank": 11
   },
   {
     "id": "0q1YbH7gLkklLFxNBLRKHD",
@@ -24,20 +48,20 @@
     "topTrackRank": 1
   },
   {
-    "id": "23ieEAZkDq0jew4MZmb9zT",
-    "title": "neo roneo",
-    "artist": "rusowsky & LATIN MAFIA",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273c868f74d6a33bd27bcee592f",
-    "playCount": 2,
-    "topTrackRank": 20
+    "id": "20r762YmB5HeofjMCiPMLv",
+    "title": "My Beautiful Dark Twisted Fantasy",
+    "artist": "Kanye West",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273d9194aa18fa4c9362b47464f",
+    "playCount": 1,
+    "topTrackRank": 17
   },
   {
-    "id": "76Rz3IYqdw3QXTagF14gB6",
-    "title": "The Fashion Focus",
-    "artist": "Starflyer 59",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273bf759419d94c10159216e2b8",
-    "playCount": 1,
-    "topTrackRank": 6
+    "id": "2yXnY2NiaZk9QiJJittS81",
+    "title": "Drip Harder",
+    "artist": "Lil Baby & Gunna",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273ce159a3ba2096e13fa9d4b4c",
+    "playCount": 6,
+    "topTrackRank": 4
   },
   {
     "id": "53wStBoNAK1lhbfbuCJ2zd",
@@ -48,38 +72,6 @@
     "topTrackRank": 8
   },
   {
-    "id": "7sZOAE8enZvif1qQgpV0SD",
-    "title": "No Sleep",
-    "artist": "TWOFACED, 6 SENSE",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273476a82ae44b821f194286b08",
-    "playCount": 1,
-    "topTrackRank": 9
-  },
-  {
-    "id": "1BKKCq9GMdMahEHhPkde5p",
-    "title": "Pet Grief",
-    "artist": "The Radio Dept.",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b27319bf3790caeb480f2c1a4ed1",
-    "playCount": 1,
-    "topTrackRank": 11
-  },
-  {
-    "id": "5s6aGKI2wpPxegrhLXmGIG",
-    "title": "MK 3.5: Die Cuts | City Planning",
-    "artist": "Mount Kimbie",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b2735011c7d3736ff91b78a9b947",
-    "playCount": 1,
-    "topTrackRank": 16
-  },
-  {
-    "id": "20r762YmB5HeofjMCiPMLv",
-    "title": "My Beautiful Dark Twisted Fantasy",
-    "artist": "Kanye West",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b273d9194aa18fa4c9362b47464f",
-    "playCount": 1,
-    "topTrackRank": 17
-  },
-  {
     "id": "3WpcDHQdnCpSFFdZNx9oDV",
     "title": "memoryland",
     "artist": "CFCF",
@@ -88,11 +80,11 @@
     "topTrackRank": 22
   },
   {
-    "id": "44TwNftgA3QYaX3BBJAvGO",
-    "title": "Paranoid Cocoon",
-    "artist": "Cotton Jones",
-    "coverImage": "https://i.scdn.co/image/ab67616d0000b27387db16a7855629cf7e1631d1",
+    "id": "76Rz3IYqdw3QXTagF14gB6",
+    "title": "The Fashion Focus",
+    "artist": "Starflyer 59",
+    "coverImage": "https://i.scdn.co/image/ab67616d0000b273bf759419d94c10159216e2b8",
     "playCount": 1,
-    "topTrackRank": 23
+    "topTrackRank": 6
   }
 ]
