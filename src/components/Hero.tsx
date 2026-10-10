@@ -34,7 +34,7 @@ export default function Hero() {
           className="mt-3 text-sm transition-colors duration-700 sm:text-base"
           style={{ color: "var(--hour-muted)" }}
         >
-          Currently automating my fantasy baseball team.
+          Currently automating my fantasy football team.
         </p>
       </div>
     </div>
